@@ -96,9 +96,9 @@ public class LoadingScreen extends javax.swing.JFrame
 
                 } else
                 {
-                    t.cancel();
                     s.lblProgress.setText("Loading Space Physics Equations... Done");
-
+                    t.cancel();
+                    
                     final MenuScreen m = new MenuScreen();
                     m.setLocationRelativeTo(null);
                     m.setResizable(false);
@@ -107,7 +107,7 @@ public class LoadingScreen extends javax.swing.JFrame
                 }
             }
         };
-        t.scheduleAtFixedRate(tt, 0, 10);
+        t.scheduleAtFixedRate(tt, 0, 20);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

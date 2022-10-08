@@ -9,8 +9,7 @@ public class MenuScreen extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         MenuScreenPanel = new javax.swing.JPanel();
         lblDescription = new javax.swing.JLabel();
@@ -36,60 +35,57 @@ public class MenuScreen extends javax.swing.JFrame
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("MAIN MENU");
 
-        btnEasyEquations.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        btnEasyEquations.setBackground(new java.awt.Color(255, 255, 255));
+        btnEasyEquations.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         btnEasyEquations.setForeground(new java.awt.Color(0, 204, 153));
-        btnEasyEquations.setText("Easy Equations");
+        btnEasyEquations.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/RocketIcon.png"))); // NOI18N
+        btnEasyEquations.setText(" EASY EQUATIONS");
         btnEasyEquations.setToolTipText("Click here to go to the Easy Equations calculator");
-        btnEasyEquations.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnEasyEquations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEasyEquationsActionPerformed(evt);
             }
         });
 
-        btnMediumEquations.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        btnMediumEquations.setBackground(new java.awt.Color(255, 255, 255));
+        btnMediumEquations.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         btnMediumEquations.setForeground(new java.awt.Color(255, 153, 51));
-        btnMediumEquations.setText("Medium Equations");
+        btnMediumEquations.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ShuttleIcon.png"))); // NOI18N
+        btnMediumEquations.setText(" MEDIUM EQUATIONS");
         btnMediumEquations.setToolTipText("Click here to go to the Medium Equations calculator");
-        btnMediumEquations.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnMediumEquations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMediumEquationsActionPerformed(evt);
             }
         });
 
-        btnDifficultEquations.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        btnDifficultEquations.setBackground(new java.awt.Color(255, 255, 255));
+        btnDifficultEquations.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         btnDifficultEquations.setForeground(new java.awt.Color(255, 51, 51));
-        btnDifficultEquations.setText("Difficult Equations");
+        btnDifficultEquations.setText("DIFFICULT EQUATIONS");
         btnDifficultEquations.setToolTipText("Click here to go to the Difficult Equations calculator");
-        btnDifficultEquations.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnDifficultEquations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDifficultEquationsActionPerformed(evt);
             }
         });
 
+        btnExit.setBackground(new java.awt.Color(255, 255, 255));
         btnExit.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         btnExit.setText("Exit");
         btnExit.setToolTipText("Click here to exit the program");
-        btnExit.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
 
+        btnHelp.setBackground(new java.awt.Color(255, 255, 255));
         btnHelp.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         btnHelp.setText("Help");
         btnHelp.setToolTipText("Click here to open the help menu");
-        btnHelp.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHelpActionPerformed(evt);
             }
         });
@@ -103,14 +99,14 @@ public class MenuScreen extends javax.swing.JFrame
                 .addGroup(MenuScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lblDescription, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btnEasyEquations, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.CENTER, MenuScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(btnDifficultEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(MenuScreenPanelLayout.createSequentialGroup()
-                            .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(12, 12, 12)
-                            .addComponent(btnHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btnMediumEquations, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnEasyEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMediumEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDifficultEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.CENTER, MenuScreenPanelLayout.createSequentialGroup()
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(btnHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(136, 136, 136))
         );
         MenuScreenPanelLayout.setVerticalGroup(
@@ -121,16 +117,16 @@ public class MenuScreen extends javax.swing.JFrame
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDescription)
                 .addGap(27, 27, 27)
-                .addComponent(btnEasyEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMediumEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEasyEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnDifficultEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnMediumEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnDifficultEquations, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
                 .addGroup(MenuScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnHelp))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
