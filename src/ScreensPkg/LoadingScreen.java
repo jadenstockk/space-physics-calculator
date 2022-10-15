@@ -1,3 +1,4 @@
+package ScreensPkg;
 
 import java.awt.Color;
 import java.util.Timer;
@@ -6,8 +7,10 @@ import java.util.TimerTask;
 public class LoadingScreen extends javax.swing.JFrame
 {
 
-    static int k = 0;
+    // Set the loading percentage to 0
+    static int loadingPercent = 0;
 
+    // Creates new LoadingScreen frame
     public LoadingScreen()
     {
         initComponents();
@@ -15,8 +18,7 @@ public class LoadingScreen extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         LoadingScreenPanel = new javax.swing.JPanel();
         pbLoading = new javax.swing.JProgressBar();
@@ -24,8 +26,14 @@ public class LoadingScreen extends javax.swing.JFrame
         lblLoadingImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(800, 500));
+        setMinimumSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(800, 500));
+        setResizable(false);
 
         LoadingScreenPanel.setBackground(new java.awt.Color(32, 5, 60));
+        LoadingScreenPanel.setMaximumSize(new java.awt.Dimension(800, 500));
+        LoadingScreenPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
         lblProgress.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         lblProgress.setForeground(new java.awt.Color(255, 255, 255));
@@ -40,9 +48,9 @@ public class LoadingScreen extends javax.swing.JFrame
         LoadingScreenPanelLayout.setHorizontalGroup(
             LoadingScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoadingScreenPanelLayout.createSequentialGroup()
-                .addContainerGap(223, Short.MAX_VALUE)
+                .addContainerGap(220, Short.MAX_VALUE)
                 .addGroup(LoadingScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(lblProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pbLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblLoadingImage))
                 .addGap(217, 217, 217))
@@ -56,18 +64,18 @@ public class LoadingScreen extends javax.swing.JFrame
                 .addComponent(lblProgress)
                 .addGap(18, 18, 18)
                 .addComponent(pbLoading, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LoadingScreenPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LoadingScreenPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LoadingScreenPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(LoadingScreenPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -75,39 +83,43 @@ public class LoadingScreen extends javax.swing.JFrame
 
     public static void main(String args[])
     {
-        final LoadingScreen s = new LoadingScreen();
+        // Create a new loading screen
+        final LoadingScreen loading = new LoadingScreen();
 
-        //s.getContentPane().setBackground(new Color(32, 5, 60));
+        loading.setLocationRelativeTo(null); // Centre the window
+        loading.setResizable(false); // Prevent window size from being changed
+        loading.setVisible(true); // Show the loading screen window
+       
+        // Create a new timer
+        final Timer timer = new Timer();
 
-        s.setLocationRelativeTo(null);
-        s.setVisible(true);
-
-        final Timer t = new Timer();
-
+        // Run the timer and increase the loading percent
         TimerTask tt = new TimerTask()
         {
             public void run()
             {
-                k++;
-                if (k < 101)
+                loadingPercent++;
+                if (loadingPercent < 101)
                 {
-                    s.pbLoading.setValue(k);
-                    s.lblProgress.setText("Loading Space Physics Equations... " + k + "%");
+                    loading.pbLoading.setValue(loadingPercent);
+                    loading.lblProgress.setText("Loading Space Physics Equations... " + loadingPercent + "%");
 
                 } else
                 {
-                    s.lblProgress.setText("Loading Space Physics Equations... Done");
-                    t.cancel();
+                    // Once the loading percentage is over 100 switch to the menu screen
+                    timer.cancel();
+                    loading.lblProgress.setText("Loading Space Physics Equations... Done");
                     
-                    final MenuScreen m = new MenuScreen();
-                    m.setLocationRelativeTo(null);
-                    m.setResizable(false);
-                    m.setVisible(true);
-                    s.dispose();
+                    // Switch to menu screen
+                    final MainMenu menu = new MainMenu();
+                    menu.setLocationRelativeTo(null); // Centre the window
+                    menu.setResizable(false); // Prevent the window size from being changed
+                    menu.setVisible(true); // Show the menu screen window
+                    loading.dispose(); // Close the current window
                 }
             }
         };
-        t.scheduleAtFixedRate(tt, 0, 20);
+        timer.scheduleAtFixedRate(tt, 0, 10); // Set the rate at which the timer increases
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
