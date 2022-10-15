@@ -21,9 +21,10 @@ public class LoadingScreen extends javax.swing.JFrame
     private void initComponents() {
 
         LoadingScreenPanel = new javax.swing.JPanel();
+        lblLoadingImage = new javax.swing.JLabel();
         pbLoading = new javax.swing.JProgressBar();
         lblProgress = new javax.swing.JLabel();
-        lblLoadingImage = new javax.swing.JLabel();
+        lblInformation = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 500));
@@ -35,36 +36,44 @@ public class LoadingScreen extends javax.swing.JFrame
         LoadingScreenPanel.setMaximumSize(new java.awt.Dimension(800, 500));
         LoadingScreenPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
-        lblProgress.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        lblLoadingImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/LoadingImage.gif"))); // NOI18N
+        lblLoadingImage.setToolTipText("");
+
+        lblProgress.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
         lblProgress.setForeground(new java.awt.Color(255, 255, 255));
         lblProgress.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblProgress.setText("Loading Space Physics Equations... 0%");
 
-        lblLoadingImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/LoadingImage.gif"))); // NOI18N
-        lblLoadingImage.setToolTipText("");
+        lblInformation.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblInformation.setForeground(new java.awt.Color(255, 255, 255));
+        lblInformation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblInformation.setText("Designed & Built by Jaden Stock");
 
         javax.swing.GroupLayout LoadingScreenPanelLayout = new javax.swing.GroupLayout(LoadingScreenPanel);
         LoadingScreenPanel.setLayout(LoadingScreenPanelLayout);
         LoadingScreenPanelLayout.setHorizontalGroup(
             LoadingScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoadingScreenPanelLayout.createSequentialGroup()
-                .addContainerGap(220, Short.MAX_VALUE)
+                .addContainerGap(181, Short.MAX_VALUE)
                 .addGroup(LoadingScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(lblProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pbLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLoadingImage))
-                .addGap(217, 217, 217))
+                    .addComponent(lblLoadingImage)
+                    .addComponent(lblInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(179, 179, 179))
         );
         LoadingScreenPanelLayout.setVerticalGroup(
             LoadingScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoadingScreenPanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(lblLoadingImage)
-                .addGap(32, 32, 32)
-                .addComponent(lblProgress)
                 .addGap(18, 18, 18)
+                .addComponent(lblLoadingImage)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblProgress)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pbLoading, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblInformation)
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,11 +128,12 @@ public class LoadingScreen extends javax.swing.JFrame
                 }
             }
         };
-        timer.scheduleAtFixedRate(tt, 0, 10); // Set the rate at which the timer increases
+        timer.scheduleAtFixedRate(tt, 0, 20); // Set the rate at which the timer increases
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel LoadingScreenPanel;
+    private javax.swing.JLabel lblInformation;
     private javax.swing.JLabel lblLoadingImage;
     private javax.swing.JLabel lblProgress;
     private javax.swing.JProgressBar pbLoading;

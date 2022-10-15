@@ -151,6 +151,7 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Run when Easy Equations button is clicked
     private void btnEasyEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnEasyEquationsActionPerformed
     {//GEN-HEADEREND:event_btnEasyEquationsActionPerformed
         // Switch to the Easy Equations screen
@@ -161,21 +162,25 @@ public class MainMenu extends javax.swing.JFrame {
         this.dispose(); // Close the current window
     }//GEN-LAST:event_btnEasyEquationsActionPerformed
 
+    // Run when Difficult Equations button is clicked
     private void btnDifficultEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnDifficultEquationsActionPerformed
     {//GEN-HEADEREND:event_btnDifficultEquationsActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnDifficultEquationsActionPerformed
 
+    // Run when Medium Equations button is clicked
     private void btnMediumEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMediumEquationsActionPerformed
     {//GEN-HEADEREND:event_btnMediumEquationsActionPerformed
 
     }//GEN-LAST:event_btnMediumEquationsActionPerformed
 
+    // Run when the exit button is pressed
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnExitActionPerformed
     {//GEN-HEADEREND:event_btnExitActionPerformed
-        System.exit(0);
+        System.exit(0); // Close the program when exit button pressed
     }//GEN-LAST:event_btnExitActionPerformed
 
+    // Run when help button is clicked
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnHelpActionPerformed
     {//GEN-HEADEREND:event_btnHelpActionPerformed
         // Overlay the Help Menu screen

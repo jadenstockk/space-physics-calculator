@@ -75,6 +75,11 @@ public class EasyEquationsMenu extends javax.swing.JFrame {
         btnSelectDrift.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSelectDrift.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
         btnSelectDrift.setText("Select");
+        btnSelectDrift.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectDriftActionPerformed(evt);
+            }
+        });
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
         btnBack.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -185,6 +190,7 @@ public class EasyEquationsMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
+    // Run when back button is clicked
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnBackActionPerformed
     {//GEN-HEADEREND:event_btnBackActionPerformed
         // Switch to the Main Menu screen
@@ -195,11 +201,13 @@ public class EasyEquationsMenu extends javax.swing.JFrame {
         this.dispose(); // Close the current window
     }//GEN-LAST:event_btnBackActionPerformed
 
+    // Run when the exit button is pressed
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnExitActionPerformed
     {//GEN-HEADEREND:event_btnExitActionPerformed
-        System.exit(0);
+        System.exit(0); // Close the program when exit button pressed
     }//GEN-LAST:event_btnExitActionPerformed
 
+    // Run when the help button is pressed
     private void btnHelpActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnHelpActionPerformed
     {//GEN-HEADEREND:event_btnHelpActionPerformed
         // Overlay the Help Menu screen
@@ -210,14 +218,25 @@ public class EasyEquationsMenu extends javax.swing.JFrame {
         help.setVisible(true); // Show the help menu screen window
     }//GEN-LAST:event_btnHelpActionPerformed
 
+    // Run when Lorentz Force select button is clicked
     private void btnSelectLorentzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectLorentzActionPerformed
-        // Switch to the Lorentz Force Equation screen
+        // Switch to the Lorentz Force equation screen
         final LorentzForce lorentz = new LorentzForce();
         lorentz.setLocationRelativeTo(null); // Centre the window
         lorentz.setResizable(false); // Prevent window size from being changed
-        lorentz.setVisible(true); // Show the menu screen window
+        lorentz.setVisible(true); // Show the lorentz force screen window
         this.dispose(); // Close the current window
     }//GEN-LAST:event_btnSelectLorentzActionPerformed
+
+    // Run when Drift Velocity select button is clicked
+    private void btnSelectDriftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDriftActionPerformed
+        // Switch to the Drift Velocity equation screen
+        final DriftVelocity drift = new DriftVelocity();
+        drift.setLocationRelativeTo(null); // Centre the window
+        drift.setResizable(false); // Prevent window size from being changed
+        drift.setVisible(true); // Show the drift velocity screen window
+        this.dispose(); // Close the current window
+    }//GEN-LAST:event_btnSelectDriftActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EasyEquationsPanel;
