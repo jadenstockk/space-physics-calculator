@@ -89,6 +89,12 @@
                                           <Component id="txfCrossSectionalArea" min="-2" pref="320" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblFreeElectronDensityUnit" max="32767" attributes="0"/>
+                                      <Component id="lblCurrentFlowUnit" max="32767" attributes="0"/>
+                                      <Component id="lblCurrentFlowUnit1" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="txfOutput" min="-2" pref="546" max="-2" attributes="0"/>
@@ -119,22 +125,35 @@
                   <Component id="txaDescription" min="-2" pref="47" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lblDriftVelocity" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblCurrentFlow" alignment="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="txfCurrentFlow" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblCurrentFlow" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                          <Component id="txfCurrentFlow" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Component id="lblCurrentFlowUnit1" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblFreeElectronDensity" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txfFreeElectronDensity" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="lblFreeElectronDensityUnit" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="lblCrossSectionalArea" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txfCrossSectionalArea" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="lblCurrentFlowUnit" min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblFreeElectronDensity" alignment="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="txfFreeElectronDensity" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblCrossSectionalArea" alignment="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="txfCrossSectionalArea" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txfOutput" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="btnCalculate" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
@@ -269,7 +288,7 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="OUTPUT: Drift Velocity (Vd) = undefined m/s"/>
-            <Property name="toolTipText" type="java.lang.String" value="The output force of the equation with display here"/>
+            <Property name="toolTipText" type="java.lang.String" value="The output drift velocity of the equation with display here"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnCalculate">
@@ -284,7 +303,7 @@
               <Image iconType="3" name="/ImagesPkg/CalculatorIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Calculate"/>
-            <Property name="toolTipText" type="java.lang.String" value="Click here to calculate the output force of the equation"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click here to calculate the output drift velocity of the equation"/>
             <Property name="iconTextGap" type="int" value="8"/>
           </Properties>
           <Events>
@@ -366,6 +385,42 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblCurrentFlowUnit">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="15" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="text" type="java.lang.String" value="mm^2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblFreeElectronDensityUnit">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="15" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="text" type="java.lang.String" value="x10^/m3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblCurrentFlowUnit1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="15" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="text" type="java.lang.String" value="A"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

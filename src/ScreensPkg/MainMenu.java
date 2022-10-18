@@ -1,15 +1,18 @@
 package ScreensPkg;
 
-public class MainMenu extends javax.swing.JFrame {
+public class MainMenu extends javax.swing.JFrame
+{
 
     // Creates new MainMenu frame
-    public MainMenu() {
+    public MainMenu()
+    {
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         MenuScreenPanel = new javax.swing.JPanel();
         lblDescription = new javax.swing.JLabel();
@@ -45,8 +48,10 @@ public class MainMenu extends javax.swing.JFrame {
         btnEasyEquations.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/RocketIcon.png"))); // NOI18N
         btnEasyEquations.setText(" EASY EQUATIONS");
         btnEasyEquations.setToolTipText("Click here to go to the Easy Equations section");
-        btnEasyEquations.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnEasyEquations.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnEasyEquationsActionPerformed(evt);
             }
         });
@@ -57,8 +62,10 @@ public class MainMenu extends javax.swing.JFrame {
         btnMediumEquations.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ShuttleIcon.png"))); // NOI18N
         btnMediumEquations.setText(" MEDIUM EQUATIONS");
         btnMediumEquations.setToolTipText("Click here to go to the Medium Equations section");
-        btnMediumEquations.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnMediumEquations.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnMediumEquationsActionPerformed(evt);
             }
         });
@@ -69,8 +76,10 @@ public class MainMenu extends javax.swing.JFrame {
         btnDifficultEquations.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/PlanetIcon.png"))); // NOI18N
         btnDifficultEquations.setText(" DIFFICULT EQUATIONS");
         btnDifficultEquations.setToolTipText("Click here to go to the Difficult Equations section");
-        btnDifficultEquations.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnDifficultEquations.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnDifficultEquationsActionPerformed(evt);
             }
         });
@@ -81,8 +90,10 @@ public class MainMenu extends javax.swing.JFrame {
         btnExit.setText("Exit");
         btnExit.setToolTipText("Click here to exit the program");
         btnExit.setIconTextGap(8);
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnExit.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnExitActionPerformed(evt);
             }
         });
@@ -93,8 +104,10 @@ public class MainMenu extends javax.swing.JFrame {
         btnHelp.setText("Help");
         btnHelp.setToolTipText("Click here to open the help menu");
         btnHelp.setIconTextGap(8);
-        btnHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnHelp.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnHelpActionPerformed(evt);
             }
         });
@@ -134,7 +147,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(MenuScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnHelp))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -165,13 +178,18 @@ public class MainMenu extends javax.swing.JFrame {
     // Run when Difficult Equations button is clicked
     private void btnDifficultEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnDifficultEquationsActionPerformed
     {//GEN-HEADEREND:event_btnDifficultEquationsActionPerformed
-        
+
     }//GEN-LAST:event_btnDifficultEquationsActionPerformed
 
     // Run when Medium Equations button is clicked
     private void btnMediumEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMediumEquationsActionPerformed
     {//GEN-HEADEREND:event_btnMediumEquationsActionPerformed
-
+        // Switch to the Medium Equations screen
+        final MediumEquationsMenu medium = new MediumEquationsMenu();
+        medium.setLocationRelativeTo(null); // Centre the window
+        medium.setResizable(false); // Prevent window size from being changed
+        medium.setVisible(true); // Show the Medium Equations screen window
+        this.dispose(); // Close the current windowÏ
     }//GEN-LAST:event_btnMediumEquationsActionPerformed
 
     // Run when the exit button is pressed

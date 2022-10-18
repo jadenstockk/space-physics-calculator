@@ -1,21 +1,24 @@
 package EasyEquationsPkg;
 
-import ScreensPkg.*;
-import Other.Validation;
+import ScreensPkg.*; // Import the screens package
+import Other.Validation; // Import the Validation class
 
-public class LorentzForce extends javax.swing.JFrame {
+public class LorentzForce extends javax.swing.JFrame
+{
 
     // Create a new validation class
     Validation validate = new Validation();
-   
+
     // Creates new LorentzForce frame
-    public LorentzForce() {
+    public LorentzForce()
+    {
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         LorentzForcePanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
@@ -35,6 +38,10 @@ public class LorentzForce extends javax.swing.JFrame {
         btnHelp = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
+        lblElectricChargeUnit = new javax.swing.JLabel();
+        lblExternalElectricFieldUnit = new javax.swing.JLabel();
+        lblMagneticFieldUnit = new javax.swing.JLabel();
+        lblVelocityUnit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
@@ -104,7 +111,7 @@ public class LorentzForce extends javax.swing.JFrame {
         txfOutput.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         txfOutput.setForeground(new java.awt.Color(0, 80, 0));
         txfOutput.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txfOutput.setText("OUTPUT: Force (F) = 0.0 newtons");
+        txfOutput.setText("OUTPUT: Force (F) = 0.0 N");
         txfOutput.setToolTipText("The output force of the equation with display here");
 
         btnCalculate.setBackground(new java.awt.Color(200, 255, 200));
@@ -113,8 +120,10 @@ public class LorentzForce extends javax.swing.JFrame {
         btnCalculate.setText("Calculate");
         btnCalculate.setToolTipText("Click here to calculate the output force of the equation");
         btnCalculate.setIconTextGap(8);
-        btnCalculate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnCalculate.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnCalculateActionPerformed(evt);
             }
         });
@@ -125,8 +134,10 @@ public class LorentzForce extends javax.swing.JFrame {
         btnBack.setText("Back");
         btnBack.setToolTipText("Click here to go back to the easy equations menu");
         btnBack.setIconTextGap(8);
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnBack.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnBackActionPerformed(evt);
             }
         });
@@ -137,8 +148,10 @@ public class LorentzForce extends javax.swing.JFrame {
         btnHelp.setText("Help");
         btnHelp.setToolTipText("Click here to open the help menu");
         btnHelp.setIconTextGap(8);
-        btnHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnHelp.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnHelpActionPerformed(evt);
             }
         });
@@ -149,8 +162,10 @@ public class LorentzForce extends javax.swing.JFrame {
         btnExit.setText("Exit");
         btnExit.setToolTipText("Click here to exit the program");
         btnExit.setIconTextGap(8);
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnExit.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnExitActionPerformed(evt);
             }
         });
@@ -161,11 +176,33 @@ public class LorentzForce extends javax.swing.JFrame {
         btnReset.setText("Reset");
         btnReset.setToolTipText("Click here to reset all the variable fields to their default values");
         btnReset.setIconTextGap(8);
-        btnReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnReset.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnResetActionPerformed(evt);
             }
         });
+
+        lblElectricChargeUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblElectricChargeUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblElectricChargeUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblElectricChargeUnit.setText("c");
+
+        lblExternalElectricFieldUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblExternalElectricFieldUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblExternalElectricFieldUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblExternalElectricFieldUnit.setText("V/m");
+
+        lblMagneticFieldUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblMagneticFieldUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblMagneticFieldUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblMagneticFieldUnit.setText("T");
+
+        lblVelocityUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblVelocityUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblVelocityUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblVelocityUnit.setText("m/s");
 
         javax.swing.GroupLayout LorentzForcePanelLayout = new javax.swing.GroupLayout(LorentzForcePanel);
         LorentzForcePanel.setLayout(LorentzForcePanelLayout);
@@ -183,23 +220,31 @@ public class LorentzForce extends javax.swing.JFrame {
                                     .addGap(45, 45, 45)))
                             .addGroup(LorentzForcePanelLayout.createSequentialGroup()
                                 .addGap(16, 16, 16)
-                                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                        .addComponent(lblVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txfVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                        .addComponent(lblExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txfExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                        .addComponent(lblElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txfElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(LorentzForcePanelLayout.createSequentialGroup()
                                         .addComponent(lblMagneticField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(32, 32, 32)
-                                        .addComponent(txfMagneticField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txfMagneticField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblMagneticFieldUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
+                                        .addComponent(lblVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(txfVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblVelocityUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+                                        .addComponent(lblExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(txfExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblExternalElectricFieldUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+                                        .addComponent(lblElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(txfElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblElectricChargeUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(LorentzForcePanelLayout.createSequentialGroup()
                                 .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -207,7 +252,7 @@ public class LorentzForce extends javax.swing.JFrame {
                     .addGroup(LorentzForcePanelLayout.createSequentialGroup()
                         .addGap(284, 284, 284)
                         .addComponent(lblEquationLorentz)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -226,25 +271,33 @@ public class LorentzForce extends javax.swing.JFrame {
                 .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txaDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblEquationLorentz)
+                .addGap(18, 20, Short.MAX_VALUE)
+                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblElectricCharge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txfElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblElectricChargeUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(txfElectricCharge, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblExternalElectricField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txfExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblExternalElectricFieldUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(txfExternalElectricField, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblVelocity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txfVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblVelocityUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(txfVelocity, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblMagneticField, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(txfMagneticField, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                    .addComponent(lblMagneticField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txfMagneticField, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblMagneticFieldUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -299,10 +352,14 @@ public class LorentzForce extends javax.swing.JFrame {
     // Run when the calculate button is pressed
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         // Check/validate whether each text field value is a valid double else display an error
-        if (validate.vDouble(txfElectricCharge.getText(), "The Electric Charge value is invalid. Please enter a valid value and try again.")) {
-            if (validate.vDouble(txfExternalElectricField.getText(), "The Electric Field value is invalid. Please enter a valid value and try again.")) {
-                if (validate.vDouble(txfVelocity.getText(), "The Velocity value is invalid. Please enter a valid value and try again.")) {
-                    if (validate.vDouble(txfMagneticField.getText(), "The Magentic Field value is invalid. Please enter a valid value and try again.")) {
+        if (validate.vDouble(txfElectricCharge.getText(), "The Electric Charge value is invalid. Please enter a valid value and try again."))
+        {
+            if (validate.vDouble(txfExternalElectricField.getText(), "The Electric Field value is invalid. Please enter a valid value and try again."))
+            {
+                if (validate.vDouble(txfVelocity.getText(), "The Velocity value is invalid. Please enter a valid value and try again."))
+                {
+                    if (validate.vDouble(txfMagneticField.getText(), "The Magentic Field value is invalid. Please enter a valid value and try again."))
+                    {
 
                         // Create variables and set their values to the associated text field values
                         double electricCharge = Double.parseDouble(txfElectricCharge.getText());
@@ -314,7 +371,7 @@ public class LorentzForce extends javax.swing.JFrame {
                         double force = electricCharge * (externalElectricField + velocity + magneticField);
 
                         // Set the output text field to the previously calculated force
-                        txfOutput.setText("OUTPUT: Force (F) = " + force + " newtons");
+                        txfOutput.setText("OUTPUT: Force (F) = " + force + " N");
 
                     }
                 }
@@ -329,7 +386,7 @@ public class LorentzForce extends javax.swing.JFrame {
         txfExternalElectricField.setText("0.0");
         txfVelocity.setText("0.0");
         txfMagneticField.setText("0.0");
-        txfOutput.setText("OUTPUT: Force (F) = 0.0 newtons");
+        txfOutput.setText("OUTPUT: Force (F) = 0.0 N");
     }//GEN-LAST:event_btnResetActionPerformed
 
 
@@ -341,11 +398,15 @@ public class LorentzForce extends javax.swing.JFrame {
     private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnReset;
     private javax.swing.JLabel lblElectricCharge;
+    private javax.swing.JLabel lblElectricChargeUnit;
     private javax.swing.JLabel lblEquationLorentz;
     private javax.swing.JLabel lblExternalElectricField;
+    private javax.swing.JLabel lblExternalElectricFieldUnit;
     private javax.swing.JLabel lblMagneticField;
+    private javax.swing.JLabel lblMagneticFieldUnit;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblVelocity;
+    private javax.swing.JLabel lblVelocityUnit;
     private javax.swing.JTextArea txaDescription;
     private javax.swing.JTextField txfElectricCharge;
     private javax.swing.JTextField txfExternalElectricField;

@@ -1,12 +1,12 @@
 package ScreensPkg;
 
-import EasyEquationsPkg.*;
+import MediumEquationsPkg.*; // Import all classes from medium equations package
 
-public class EasyEquationsMenu extends javax.swing.JFrame
+public class MediumEquationsMenu extends javax.swing.JFrame
 {
 
-    // Creates new EasyEquationsMenu frame
-    public EasyEquationsMenu()
+    // Creates new MediumEquationsMenu frame
+    public MediumEquationsMenu()
     {
         initComponents();
     }
@@ -19,18 +19,17 @@ public class EasyEquationsMenu extends javax.swing.JFrame
         EasyEquationsPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         lblDescription = new javax.swing.JLabel();
-        lblTitleLorentz = new javax.swing.JLabel();
-        lblEquationLorentz = new javax.swing.JLabel();
-        btnSelectLorentz = new javax.swing.JButton();
-        lblTitleDrift = new javax.swing.JLabel();
-        lblEquationDrift = new javax.swing.JLabel();
-        btnSelectDrift = new javax.swing.JButton();
+        lblTitleDynamic = new javax.swing.JLabel();
+        lblEquationDynamic = new javax.swing.JLabel();
+        btnSelectDynamic = new javax.swing.JButton();
+        lblTitleSchwardzschild = new javax.swing.JLabel();
+        lblEquationSchwardzschild = new javax.swing.JLabel();
+        btnSelectSchwardzschild = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         btnHelp = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 500));
         setMinimumSize(new java.awt.Dimension(800, 500));
         setResizable(false);
 
@@ -39,55 +38,55 @@ public class EasyEquationsMenu extends javax.swing.JFrame
         EasyEquationsPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
         lblTitle.setFont(new java.awt.Font("Monospaced", 1, 28)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 204, 0));
+        lblTitle.setForeground(new java.awt.Color(255, 153, 51));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/RocketIcon.png"))); // NOI18N
-        lblTitle.setText(" EASY EQUATIONS");
+        lblTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ShuttleIcon.png"))); // NOI18N
+        lblTitle.setText(" MEDIUM EQUATIONS");
 
         lblDescription.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         lblDescription.setForeground(new java.awt.Color(255, 255, 255));
         lblDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDescription.setText("Space Physics Calculator");
 
-        lblTitleLorentz.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
-        lblTitleLorentz.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitleLorentz.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitleLorentz.setText("LORENTZ FORCE");
+        lblTitleDynamic.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        lblTitleDynamic.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitleDynamic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitleDynamic.setText("DYNAMIC PRESSURE");
 
-        lblEquationLorentz.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEquationLorentz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/LorentzForce.png"))); // NOI18N
+        lblEquationDynamic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEquationDynamic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/DynamicPressure.png"))); // NOI18N
 
-        btnSelectLorentz.setBackground(new java.awt.Color(255, 255, 255));
-        btnSelectLorentz.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSelectLorentz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
-        btnSelectLorentz.setText("Select");
-        btnSelectLorentz.setToolTipText("Click here to open the Lorentz Force calculator");
-        btnSelectLorentz.addActionListener(new java.awt.event.ActionListener()
+        btnSelectDynamic.setBackground(new java.awt.Color(255, 255, 255));
+        btnSelectDynamic.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSelectDynamic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
+        btnSelectDynamic.setText("Select");
+        btnSelectDynamic.setToolTipText("Click here to open the Dynamic Pressure calculator");
+        btnSelectDynamic.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnSelectLorentzActionPerformed(evt);
+                btnSelectDynamicActionPerformed(evt);
             }
         });
 
-        lblTitleDrift.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
-        lblTitleDrift.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitleDrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitleDrift.setText("DRIFT VELOCITY");
+        lblTitleSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        lblTitleSchwardzschild.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitleSchwardzschild.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitleSchwardzschild.setText("SCHWARZSCHILD RADIUS");
 
-        lblEquationDrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEquationDrift.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/DriftVelocity.png"))); // NOI18N
+        lblEquationSchwardzschild.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEquationSchwardzschild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SchwarzschildRadius.png"))); // NOI18N
 
-        btnSelectDrift.setBackground(new java.awt.Color(255, 255, 255));
-        btnSelectDrift.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSelectDrift.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
-        btnSelectDrift.setText("Select");
-        btnSelectDrift.setToolTipText("Click here to open the Drift Velocity calculator");
-        btnSelectDrift.addActionListener(new java.awt.event.ActionListener()
+        btnSelectSchwardzschild.setBackground(new java.awt.Color(255, 255, 255));
+        btnSelectSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSelectSchwardzschild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
+        btnSelectSchwardzschild.setText("Select");
+        btnSelectSchwardzschild.setToolTipText("Click here to open the Schwardschild Radius calculator");
+        btnSelectSchwardzschild.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnSelectDriftActionPerformed(evt);
+                btnSelectSchwardzschildActionPerformed(evt);
             }
         });
 
@@ -144,14 +143,14 @@ public class EasyEquationsMenu extends javax.swing.JFrame
                     .addComponent(lblDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                         .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(btnSelectLorentz, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblEquationLorentz, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblTitleLorentz, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTitleDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(lblTitleDrift, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblEquationDrift, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSelectDrift, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblTitleSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 95, Short.MAX_VALUE))
             .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                 .addGap(212, 212, 212)
@@ -169,19 +168,19 @@ public class EasyEquationsMenu extends javax.swing.JFrame
                 .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
+                .addGap(69, 69, 69)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTitleLorentz)
-                    .addComponent(lblTitleDrift))
+                    .addComponent(lblTitleDynamic)
+                    .addComponent(lblTitleSchwardzschild))
                 .addGap(1, 1, 1)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblEquationDrift, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEquationLorentz, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSelectDrift, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSelectLorentz, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                    .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnBack)
@@ -231,38 +230,42 @@ public class EasyEquationsMenu extends javax.swing.JFrame
         help.setVisible(true); // Show the help menu screen window
     }//GEN-LAST:event_btnHelpActionPerformed
 
-    // Run when Lorentz Force select button is clicked
-    private void btnSelectLorentzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectLorentzActionPerformed
-        // Switch to the Lorentz Force equation screen
-        final LorentzForce lorentz = new LorentzForce();
-        lorentz.setLocationRelativeTo(null); // Centre the window
-        lorentz.setResizable(false); // Prevent window size from being changed
-        lorentz.setVisible(true); // Show the lorentz force screen window
+    // Run when Dyanmic Pressure select button is clicked
+    private void btnSelectDynamicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDynamicActionPerformed
+        // Switch to the Dyanmic Pressure equation screen
+        /*
+        final DyanmicPressure dynamic = new DyanmicPressure();
+        dynamic.setLocationRelativeTo(null); // Centre the window
+        dynamic.setResizable(false); // Prevent window size from being changed
+        dynamic.setVisible(true); // Show the dynamic pressure screen window
         this.dispose(); // Close the current window
-    }//GEN-LAST:event_btnSelectLorentzActionPerformed
+         */
+    }//GEN-LAST:event_btnSelectDynamicActionPerformed
 
-    // Run when Drift Velocity select button is clicked
-    private void btnSelectDriftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDriftActionPerformed
-        // Switch to the Drift Velocity equation screen
-        final DriftVelocity drift = new DriftVelocity();
-        drift.setLocationRelativeTo(null); // Centre the window
-        drift.setResizable(false); // Prevent window size from being changed
-        drift.setVisible(true); // Show the drift velocity screen window
+    // Run when Schwardzschild Radius select button is clicked
+    private void btnSelectSchwardzschildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectSchwardzschildActionPerformed
+        // Switch to the Schwardzschild Radius equation screen
+        /*
+        final SchwardzschildRadius schwardzschild = new SchwardzschildRadius();
+        schwardzschild.setLocationRelativeTo(null); // Centre the window
+        schwardzschild.setResizable(false); // Prevent window size from being changed
+        schwardzschild.setVisible(true); // Show the schwardzschild radius screen window
         this.dispose(); // Close the current window
-    }//GEN-LAST:event_btnSelectDriftActionPerformed
+         */
+    }//GEN-LAST:event_btnSelectSchwardzschildActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EasyEquationsPanel;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHelp;
-    private javax.swing.JButton btnSelectDrift;
-    private javax.swing.JButton btnSelectLorentz;
+    private javax.swing.JButton btnSelectDynamic;
+    private javax.swing.JButton btnSelectSchwardzschild;
     private javax.swing.JLabel lblDescription;
-    private javax.swing.JLabel lblEquationDrift;
-    private javax.swing.JLabel lblEquationLorentz;
+    private javax.swing.JLabel lblEquationDynamic;
+    private javax.swing.JLabel lblEquationSchwardzschild;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JLabel lblTitleDrift;
-    private javax.swing.JLabel lblTitleLorentz;
+    private javax.swing.JLabel lblTitleDynamic;
+    private javax.swing.JLabel lblTitleSchwardzschild;
     // End of variables declaration//GEN-END:variables
 }
