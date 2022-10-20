@@ -1,12 +1,12 @@
 package ScreensPkg;
 
-import MediumEquationsPkg.*; // Import all classes from medium equations package
+// import DifficultEquationsPkg.*; // Import all classes from difficult equations package
 
-public class MediumEquationsMenu extends javax.swing.JFrame
+public class DifficultEquationsMenu extends javax.swing.JFrame
 {
 
-    // Creates new MediumEquationsMenu frame
-    public MediumEquationsMenu()
+    // Creates new DiffcultEquationsMenu frame
+    public DifficultEquationsMenu()
     {
         initComponents();
     }
@@ -38,23 +38,23 @@ public class MediumEquationsMenu extends javax.swing.JFrame
         EasyEquationsPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
         lblTitle.setFont(new java.awt.Font("Monospaced", 1, 28)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(255, 153, 51));
+        lblTitle.setForeground(new java.awt.Color(255, 51, 51));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ShuttleIcon.png"))); // NOI18N
-        lblTitle.setText(" MEDIUM EQUATIONS");
+        lblTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/PlanetIcon.png"))); // NOI18N
+        lblTitle.setText(" DIFFICULT EQUATIONS");
 
         lblDescription.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         lblDescription.setForeground(new java.awt.Color(255, 255, 255));
         lblDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDescription.setText("Space Physics Calculator");
 
-        lblTitleDynamic.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        lblTitleDynamic.setFont(new java.awt.Font("Monospaced", 1, 16)); // NOI18N
         lblTitleDynamic.setForeground(new java.awt.Color(255, 255, 255));
         lblTitleDynamic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitleDynamic.setText("DYNAMIC PRESSURE");
+        lblTitleDynamic.setText("MAXWELL–BOLTZMANN DISTRIBUTION");
 
         lblEquationDynamic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEquationDynamic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/DynamicPressure.png"))); // NOI18N
+        lblEquationDynamic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/MaxwellBoltzmannDistribution.png"))); // NOI18N
 
         btnSelectDynamic.setBackground(new java.awt.Color(255, 255, 255));
         btnSelectDynamic.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -69,13 +69,13 @@ public class MediumEquationsMenu extends javax.swing.JFrame
             }
         });
 
-        lblTitleSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        lblTitleSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 16)); // NOI18N
         lblTitleSchwardzschild.setForeground(new java.awt.Color(255, 255, 255));
         lblTitleSchwardzschild.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitleSchwardzschild.setText("SCHWARZSCHILD RADIUS");
+        lblTitleSchwardzschild.setText("FRIEDMANN EQUATION");
 
         lblEquationSchwardzschild.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEquationSchwardzschild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SchwarzschildRadius.png"))); // NOI18N
+        lblEquationSchwardzschild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/FriedmannEquation.png"))); // NOI18N
 
         btnSelectSchwardzschild.setBackground(new java.awt.Color(255, 255, 255));
         btnSelectSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -149,9 +149,9 @@ public class MediumEquationsMenu extends javax.swing.JFrame
                         .addGap(18, 18, 18)
                         .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(lblTitleSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 95, Short.MAX_VALUE))
+                .addGap(0, 65, Short.MAX_VALUE))
             .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                 .addGap(212, 212, 212)
                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,15 +172,18 @@ public class MediumEquationsMenu extends javax.swing.JFrame
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTitleDynamic)
                     .addComponent(lblTitleSchwardzschild))
-                .addGap(1, 1, 1)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                    .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnBack)
@@ -232,12 +235,14 @@ public class MediumEquationsMenu extends javax.swing.JFrame
 
     // Run when Dyanmic Pressure select button is clicked
     private void btnSelectDynamicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDynamicActionPerformed
+        /*
         // Switch to the Dyanmic Pressure equation screen
         final DynamicPressure dynamic = new DynamicPressure();
         dynamic.setLocationRelativeTo(null); // Centre the window
         dynamic.setResizable(false); // Prevent window size from being changed
         dynamic.setVisible(true); // Show the dynamic pressure screen window
         this.dispose(); // Close the current window
+        */
     }//GEN-LAST:event_btnSelectDynamicActionPerformed
 
     // Run when Schwardzschild Radius select button is clicked

@@ -16,7 +16,7 @@ public class MainMenu extends javax.swing.JFrame
 
         MenuScreenPanel = new javax.swing.JPanel();
         lblDescription = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         btnEasyEquations = new javax.swing.JButton();
         btnMediumEquations = new javax.swing.JButton();
         btnDifficultEquations = new javax.swing.JButton();
@@ -37,10 +37,10 @@ public class MainMenu extends javax.swing.JFrame
         lblDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDescription.setText("Space Physics Calculator");
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("MAIN MENU");
+        lblTitle.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("MAIN MENU");
 
         btnEasyEquations.setBackground(new java.awt.Color(255, 255, 255));
         btnEasyEquations.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
@@ -119,7 +119,7 @@ public class MainMenu extends javax.swing.JFrame
             .addGroup(MenuScreenPanelLayout.createSequentialGroup()
                 .addContainerGap(139, Short.MAX_VALUE)
                 .addGroup(MenuScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lblDescription, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(btnEasyEquations, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMediumEquations, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -134,7 +134,7 @@ public class MainMenu extends javax.swing.JFrame
             MenuScreenPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuScreenPanelLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(jLabel2)
+                .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDescription)
                 .addGap(27, 27, 27)
@@ -178,7 +178,12 @@ public class MainMenu extends javax.swing.JFrame
     // Run when Difficult Equations button is clicked
     private void btnDifficultEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnDifficultEquationsActionPerformed
     {//GEN-HEADEREND:event_btnDifficultEquationsActionPerformed
-
+        // Switch to the Difficult Equations screen
+        final DifficultEquationsMenu difficult = new DifficultEquationsMenu();
+        difficult.setLocationRelativeTo(null); // Centre the window
+        difficult.setResizable(false); // Prevent window size from being changed
+        difficult.setVisible(true); // Show the Difficult Equations screen window
+        this.dispose(); // Close the current window
     }//GEN-LAST:event_btnDifficultEquationsActionPerformed
 
     // Run when Medium Equations button is clicked
@@ -216,7 +221,7 @@ public class MainMenu extends javax.swing.JFrame
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnMediumEquations;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblDescription;
+    private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }

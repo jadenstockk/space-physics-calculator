@@ -59,7 +59,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace pref="139" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTitle" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="lblDescription" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="btnEasyEquations" alignment="2" min="-2" pref="350" max="-2" attributes="0"/>
                       <Component id="btnMediumEquations" alignment="2" min="-2" pref="425" max="-2" attributes="0"/>
@@ -78,7 +78,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblDescription" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -110,7 +110,7 @@
             <Property name="text" type="java.lang.String" value="Space Physics Calculator"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="24" style="1"/>
