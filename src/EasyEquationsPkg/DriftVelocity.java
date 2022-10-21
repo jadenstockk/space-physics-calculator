@@ -334,6 +334,9 @@ public class DriftVelocity extends javax.swing.JFrame
                     double currentFlow = Double.parseDouble(txfCurrentFlow.getText());
                     double freeElectronDensity = Double.parseDouble(txfFreeElectronDensity.getText());
                     double crossSectionalArea = Double.parseDouble(txfCrossSectionalArea.getText());
+                    
+                    // Create varaible for constant electron charge variable
+                    double electronCharge = 1.602 * 10e-19;
 
                     // If either of the denominator variables are 0 (undefined) then store an error message in the error variable
                     String error = "";
@@ -352,9 +355,7 @@ public class DriftVelocity extends javax.swing.JFrame
 
                     } else
                     {
-                        // Hard code the electron charge
-                        double electronCharge = 1.602 * 10e-19;
-
+                        
                         // Calculate the drift velocity that will be output
                         double driftVelocity = currentFlow / (freeElectronDensity * electronCharge * crossSectionalArea);
 

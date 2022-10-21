@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JSpinner" name="jSpinner1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -57,45 +61,12 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txaDescription" alignment="1" min="-2" pref="705" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="lblTitle" min="-2" pref="616" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblMagneticField" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="txfMagneticField" min="-2" pref="320" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lblMagneticFieldUnit" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lblVelocity" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="txfVelocity" min="-2" pref="320" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lblVelocityUnit" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblExternalElectricField" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="txfExternalElectricField" min="-2" pref="320" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lblExternalElectricFieldUnit" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblElectricCharge" min="-2" pref="258" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="txfElectricCharge" min="-2" pref="320" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lblElectricChargeUnit" min="-2" pref="50" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -107,21 +78,51 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
-                          <Component id="lblEquationLorentz" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEquationMaxwell" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="47" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnBack" min="-2" pref="104" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="btnReset" min="-2" pref="104" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="btnHelp" min="-2" pref="104" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="btnExit" min="-2" pref="104" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnBack" min="-2" pref="104" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnReset" min="-2" pref="104" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="btnHelp" min="-2" pref="104" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="btnExit" min="-2" pref="104" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="lblParticleSpeed" min="-2" pref="258" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="txfParticleSpeed" min="-2" pref="320" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblParticleSpeedUnit" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblAbsoluteTemperatue" min="-2" pref="258" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="txfAbsoluteTemperatue" min="-2" pref="320" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblAbsoluteTemperatueUnit" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblParticleMass" min="-2" pref="258" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="txfParticleMass" min="-2" pref="320" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblParticleMassUnit" min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -132,41 +133,33 @@
                   <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="txaDescription" min="-2" pref="52" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblEquationLorentz" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" pref="19" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="lblEquationMaxwell" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblElectricCharge" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblParticleMass" alignment="0" max="32767" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="txfElectricCharge" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="lblElectricChargeUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="txfParticleMass" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="lblParticleMassUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblExternalElectricField" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblAbsoluteTemperatue" alignment="0" max="32767" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="txfExternalElectricField" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="lblExternalElectricFieldUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="txfAbsoluteTemperatue" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="lblAbsoluteTemperatueUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblVelocity" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblParticleSpeed" alignment="0" max="32767" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="txfVelocity" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="lblVelocityUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="txfParticleSpeed" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="lblParticleSpeedUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblMagneticField" alignment="0" max="32767" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="txfMagneticField" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="lblMagneticFieldUnit" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txfOutput" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="btnCalculate" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
@@ -219,7 +212,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblEquationLorentz">
+        <Component class="javax.swing.JLabel" name="lblEquationMaxwell">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -227,7 +220,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblElectricCharge">
+        <Component class="javax.swing.JLabel" name="lblParticleMass">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="15" style="1"/>
@@ -239,7 +232,7 @@
             <Property name="text" type="java.lang.String" value="Particle Mass (m)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfElectricCharge">
+        <Component class="javax.swing.JTextField" name="txfParticleMass">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="14" style="0"/>
@@ -248,7 +241,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Type in the electric charge here"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblExternalElectricField">
+        <Component class="javax.swing.JLabel" name="lblAbsoluteTemperatue">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="15" style="1"/>
@@ -257,10 +250,10 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value=" Electric Field (ExternalE)"/>
+            <Property name="text" type="java.lang.String" value="Absolute Temperature (T)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfExternalElectricField">
+        <Component class="javax.swing.JTextField" name="txfAbsoluteTemperatue">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="14" style="0"/>
@@ -269,7 +262,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Type in the electric field here"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblVelocity">
+        <Component class="javax.swing.JLabel" name="lblParticleSpeed">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="15" style="1"/>
@@ -278,37 +271,16 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Velocity (V)"/>
+            <Property name="text" type="java.lang.String" value="Particle Speed (v)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfVelocity">
+        <Component class="javax.swing.JTextField" name="txfParticleSpeed">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0.0"/>
             <Property name="toolTipText" type="java.lang.String" value="Type in the velocity here"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblMagneticField">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Monospaced" size="15" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Magnetic Field (B)"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txfMagneticField">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Monospaced" size="14" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="0.0"/>
-            <Property name="toolTipText" type="java.lang.String" value="Type in the magnetic field here"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txfOutput">
@@ -322,7 +294,7 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="OUTPUT: PD Function (fv) = 0.0 s/m"/>
-            <Property name="toolTipText" type="java.lang.String" value="The output force of the equation with display here"/>
+            <Property name="toolTipText" type="java.lang.String" value="The output probability density function of the equation with display here"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfOutputActionPerformed"/>
@@ -340,7 +312,7 @@
               <Image iconType="3" name="/ImagesPkg/CalculatorIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Calculate"/>
-            <Property name="toolTipText" type="java.lang.String" value="Click here to calculate the output force of the equation"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click here to calculate the output probability density function of the equation"/>
             <Property name="iconTextGap" type="int" value="8"/>
           </Properties>
           <Events>
@@ -359,7 +331,7 @@
               <Image iconType="3" name="/ImagesPkg/BackIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
-            <Property name="toolTipText" type="java.lang.String" value="Click here to go back to the easy equations menu"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click here to go back to the difficult equations menu"/>
             <Property name="iconTextGap" type="int" value="8"/>
           </Properties>
           <Events>
@@ -423,7 +395,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblElectricChargeUnit">
+        <Component class="javax.swing.JLabel" name="lblParticleMassUnit">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="15" style="1"/>
@@ -432,10 +404,10 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="c"/>
+            <Property name="text" type="java.lang.String" value="kg"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblExternalElectricFieldUnit">
+        <Component class="javax.swing.JLabel" name="lblAbsoluteTemperatueUnit">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="15" style="1"/>
@@ -444,22 +416,10 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="V/m"/>
+            <Property name="text" type="java.lang.String" value="K"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblMagneticFieldUnit">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Monospaced" size="15" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="2"/>
-            <Property name="text" type="java.lang.String" value="T"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblVelocityUnit">
+        <Component class="javax.swing.JLabel" name="lblParticleSpeedUnit">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="15" style="1"/>

@@ -60,15 +60,15 @@
                       <Component id="lblDescription" alignment="2" min="-2" pref="616" max="-2" attributes="0"/>
                       <Group type="102" alignment="2" attributes="0">
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="btnSelectDynamic" alignment="2" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="lblEquationDynamic" alignment="2" min="-2" pref="300" max="-2" attributes="0"/>
-                              <Component id="lblTitleDynamic" alignment="2" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="btnSelectMaxwell" alignment="2" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="lblEquationMaxwell" alignment="2" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="lblTitleMaxwell" alignment="2" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="lblTitleSchwardzschild" alignment="2" min="-2" pref="300" max="-2" attributes="0"/>
-                              <Component id="lblEquationSchwardzschild" alignment="2" min="-2" pref="330" max="-2" attributes="0"/>
-                              <Component id="btnSelectSchwardzschild" alignment="2" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="lblTitleFriedmann" alignment="2" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="lblEquationFriedmann" alignment="2" min="-2" pref="330" max="-2" attributes="0"/>
+                              <Component id="btnSelectFriedmann" alignment="2" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -94,21 +94,21 @@
                   <Component id="lblDescription" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblTitleDynamic" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblTitleSchwardzschild" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTitleMaxwell" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTitleFriedmann" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                          <Component id="lblEquationSchwardzschild" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="lblEquationFriedmann" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnSelectSchwardzschild" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnSelectFriedmann" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblEquationDynamic" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Component id="lblEquationMaxwell" min="-2" pref="80" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnSelectDynamic" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="btnSelectMaxwell" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="97" max="32767" attributes="0"/>
@@ -150,7 +150,7 @@
             <Property name="text" type="java.lang.String" value="Space Physics Calculator"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblTitleDynamic">
+        <Component class="javax.swing.JLabel" name="lblTitleMaxwell">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="16" style="1"/>
@@ -162,7 +162,7 @@
             <Property name="text" type="java.lang.String" value="MAXWELL&#x2013;BOLTZMANN DISTRIBUTION"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblEquationDynamic">
+        <Component class="javax.swing.JLabel" name="lblEquationMaxwell">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -170,7 +170,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSelectDynamic">
+        <Component class="javax.swing.JButton" name="btnSelectMaxwell">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -182,13 +182,13 @@
               <Image iconType="3" name="/ImagesPkg/SelectIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Select"/>
-            <Property name="toolTipText" type="java.lang.String" value="Click here to open the Dynamic Pressure calculator"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click here to open the Maxwell-Boltzmann Distribution calculator"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectDynamicActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectMaxwellActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblTitleSchwardzschild">
+        <Component class="javax.swing.JLabel" name="lblTitleFriedmann">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Monospaced" size="16" style="1"/>
@@ -200,7 +200,7 @@
             <Property name="text" type="java.lang.String" value="FRIEDMANN EQUATION"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblEquationSchwardzschild">
+        <Component class="javax.swing.JLabel" name="lblEquationFriedmann">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -208,7 +208,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSelectSchwardzschild">
+        <Component class="javax.swing.JButton" name="btnSelectFriedmann">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -220,10 +220,10 @@
               <Image iconType="3" name="/ImagesPkg/SelectIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Select"/>
-            <Property name="toolTipText" type="java.lang.String" value="Click here to open the Schwardschild Radius calculator"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click here to open the Friedmann Equation calculator"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectSchwardzschildActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectFriedmannActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBack">

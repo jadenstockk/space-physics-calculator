@@ -1,6 +1,6 @@
 package ScreensPkg;
 
-// import DifficultEquationsPkg.*; // Import all classes from difficult equations package
+import DifficultEquationsPkg.*; // Import all classes from difficult equations package
 
 public class DifficultEquationsMenu extends javax.swing.JFrame
 {
@@ -19,12 +19,12 @@ public class DifficultEquationsMenu extends javax.swing.JFrame
         EasyEquationsPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         lblDescription = new javax.swing.JLabel();
-        lblTitleDynamic = new javax.swing.JLabel();
-        lblEquationDynamic = new javax.swing.JLabel();
-        btnSelectDynamic = new javax.swing.JButton();
-        lblTitleSchwardzschild = new javax.swing.JLabel();
-        lblEquationSchwardzschild = new javax.swing.JLabel();
-        btnSelectSchwardzschild = new javax.swing.JButton();
+        lblTitleMaxwell = new javax.swing.JLabel();
+        lblEquationMaxwell = new javax.swing.JLabel();
+        btnSelectMaxwell = new javax.swing.JButton();
+        lblTitleFriedmann = new javax.swing.JLabel();
+        lblEquationFriedmann = new javax.swing.JLabel();
+        btnSelectFriedmann = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         btnHelp = new javax.swing.JButton();
@@ -48,45 +48,45 @@ public class DifficultEquationsMenu extends javax.swing.JFrame
         lblDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDescription.setText("Space Physics Calculator");
 
-        lblTitleDynamic.setFont(new java.awt.Font("Monospaced", 1, 16)); // NOI18N
-        lblTitleDynamic.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitleDynamic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitleDynamic.setText("MAXWELL–BOLTZMANN DISTRIBUTION");
+        lblTitleMaxwell.setFont(new java.awt.Font("Monospaced", 1, 16)); // NOI18N
+        lblTitleMaxwell.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitleMaxwell.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitleMaxwell.setText("MAXWELL–BOLTZMANN DISTRIBUTION");
 
-        lblEquationDynamic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEquationDynamic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/MaxwellBoltzmannDistribution.png"))); // NOI18N
+        lblEquationMaxwell.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEquationMaxwell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/MaxwellBoltzmannDistribution.png"))); // NOI18N
 
-        btnSelectDynamic.setBackground(new java.awt.Color(255, 255, 255));
-        btnSelectDynamic.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSelectDynamic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
-        btnSelectDynamic.setText("Select");
-        btnSelectDynamic.setToolTipText("Click here to open the Dynamic Pressure calculator");
-        btnSelectDynamic.addActionListener(new java.awt.event.ActionListener()
+        btnSelectMaxwell.setBackground(new java.awt.Color(255, 255, 255));
+        btnSelectMaxwell.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSelectMaxwell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
+        btnSelectMaxwell.setText("Select");
+        btnSelectMaxwell.setToolTipText("Click here to open the Maxwell-Boltzmann Distribution calculator");
+        btnSelectMaxwell.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnSelectDynamicActionPerformed(evt);
+                btnSelectMaxwellActionPerformed(evt);
             }
         });
 
-        lblTitleSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 16)); // NOI18N
-        lblTitleSchwardzschild.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitleSchwardzschild.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitleSchwardzschild.setText("FRIEDMANN EQUATION");
+        lblTitleFriedmann.setFont(new java.awt.Font("Monospaced", 1, 16)); // NOI18N
+        lblTitleFriedmann.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitleFriedmann.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitleFriedmann.setText("FRIEDMANN EQUATION");
 
-        lblEquationSchwardzschild.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEquationSchwardzschild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/FriedmannEquation.png"))); // NOI18N
+        lblEquationFriedmann.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEquationFriedmann.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/FriedmannEquation.png"))); // NOI18N
 
-        btnSelectSchwardzschild.setBackground(new java.awt.Color(255, 255, 255));
-        btnSelectSchwardzschild.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSelectSchwardzschild.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
-        btnSelectSchwardzschild.setText("Select");
-        btnSelectSchwardzschild.setToolTipText("Click here to open the Schwardschild Radius calculator");
-        btnSelectSchwardzschild.addActionListener(new java.awt.event.ActionListener()
+        btnSelectFriedmann.setBackground(new java.awt.Color(255, 255, 255));
+        btnSelectFriedmann.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSelectFriedmann.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/SelectIcon.png"))); // NOI18N
+        btnSelectFriedmann.setText("Select");
+        btnSelectFriedmann.setToolTipText("Click here to open the Friedmann Equation calculator");
+        btnSelectFriedmann.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnSelectSchwardzschildActionPerformed(evt);
+                btnSelectFriedmannActionPerformed(evt);
             }
         });
 
@@ -143,14 +143,14 @@ public class DifficultEquationsMenu extends javax.swing.JFrame
                     .addComponent(lblDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                         .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblTitleDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnSelectMaxwell, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEquationMaxwell, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTitleMaxwell, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(lblTitleSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblTitleFriedmann, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEquationFriedmann, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSelectFriedmann, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 65, Short.MAX_VALUE))
             .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                 .addGap(212, 212, 212)
@@ -170,19 +170,19 @@ public class DifficultEquationsMenu extends javax.swing.JFrame
                 .addComponent(lblDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTitleDynamic)
-                    .addComponent(lblTitleSchwardzschild))
+                    .addComponent(lblTitleMaxwell)
+                    .addComponent(lblTitleFriedmann))
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblEquationFriedmann, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnSelectFriedmann, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblEquationMaxwell, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSelectMaxwell, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
@@ -233,42 +233,40 @@ public class DifficultEquationsMenu extends javax.swing.JFrame
         help.setVisible(true); // Show the help menu screen window
     }//GEN-LAST:event_btnHelpActionPerformed
 
-    // Run when Dyanmic Pressure select button is clicked
-    private void btnSelectDynamicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDynamicActionPerformed
-        /*
-        // Switch to the Dyanmic Pressure equation screen
-        final DynamicPressure dynamic = new DynamicPressure();
-        dynamic.setLocationRelativeTo(null); // Centre the window
-        dynamic.setResizable(false); // Prevent window size from being changed
-        dynamic.setVisible(true); // Show the dynamic pressure screen window
+    // Run when Maxwell-Boltzmann Distribution select button is clicked
+    private void btnSelectMaxwellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectMaxwellActionPerformed
+        // Switch to the Maxwell-Boltzmann Distribution equation screen
+        final MaxwellBoltzmannDistribution maxwell = new MaxwellBoltzmannDistribution();
+        maxwell.setLocationRelativeTo(null); // Centre the window
+        maxwell.setResizable(false); // Prevent window size from being changed
+        maxwell.setVisible(true); // Show the Maxwell-Boltzmann Distribution screen window
         this.dispose(); // Close the current window
-        */
-    }//GEN-LAST:event_btnSelectDynamicActionPerformed
+    }//GEN-LAST:event_btnSelectMaxwellActionPerformed
 
-    // Run when Schwardzschild Radius select button is clicked
-    private void btnSelectSchwardzschildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectSchwardzschildActionPerformed
-        // Switch to the Schwardzschild Radius equation screen
+    // Run when Friedmann Equation select button is clicked
+    private void btnSelectFriedmannActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectFriedmannActionPerformed
+        // Switch to the Friedmann Equation screen
         /*
-        final SchwardzschildRadius schwardzschild = new SchwardzschildRadius();
-        schwardzschild.setLocationRelativeTo(null); // Centre the window
-        schwardzschild.setResizable(false); // Prevent window size from being changed
-        schwardzschild.setVisible(true); // Show the schwardzschild radius screen window
+        final FriedmannEquation friedmann = new FriedmannEquation();
+        friedmann.setLocationRelativeTo(null); // Centre the window
+        friedmann.setResizable(false); // Prevent window size from being changed
+        friedmann.setVisible(true); // Show the Friedmann Equation screen window
         this.dispose(); // Close the current window
          */
-    }//GEN-LAST:event_btnSelectSchwardzschildActionPerformed
+    }//GEN-LAST:event_btnSelectFriedmannActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EasyEquationsPanel;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHelp;
-    private javax.swing.JButton btnSelectDynamic;
-    private javax.swing.JButton btnSelectSchwardzschild;
+    private javax.swing.JButton btnSelectFriedmann;
+    private javax.swing.JButton btnSelectMaxwell;
     private javax.swing.JLabel lblDescription;
-    private javax.swing.JLabel lblEquationDynamic;
-    private javax.swing.JLabel lblEquationSchwardzschild;
+    private javax.swing.JLabel lblEquationFriedmann;
+    private javax.swing.JLabel lblEquationMaxwell;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JLabel lblTitleDynamic;
-    private javax.swing.JLabel lblTitleSchwardzschild;
+    private javax.swing.JLabel lblTitleFriedmann;
+    private javax.swing.JLabel lblTitleMaxwell;
     // End of variables declaration//GEN-END:variables
 }
