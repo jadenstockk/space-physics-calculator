@@ -240,16 +240,14 @@ public class MediumEquationsMenu extends javax.swing.JFrame
         this.dispose(); // Close the current window
     }//GEN-LAST:event_btnSelectDynamicActionPerformed
 
-    // Run when Schwardzschild Radius select button is clicked
+    // Run when Schwarzschild Radius select button is clicked
     private void btnSelectSchwardzschildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectSchwardzschildActionPerformed
         // Switch to the Schwardzschild Radius equation screen
-        /*
-        final SchwardzschildRadius schwardzschild = new SchwardzschildRadius();
-        schwardzschild.setLocationRelativeTo(null); // Centre the window
-        schwardzschild.setResizable(false); // Prevent window size from being changed
-        schwardzschild.setVisible(true); // Show the schwardzschild radius screen window
+        final SchwarzschildRadius schwarzschild = new SchwarzschildRadius();
+        schwarzschild.setLocationRelativeTo(null); // Centre the window
+        schwarzschild.setResizable(false); // Prevent window size from being changed
+        schwarzschild.setVisible(true); // Show the schwarzschild radius screen window
         this.dispose(); // Close the current window
-         */
     }//GEN-LAST:event_btnSelectSchwardzschildActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

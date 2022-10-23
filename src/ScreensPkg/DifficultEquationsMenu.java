@@ -246,13 +246,11 @@ public class DifficultEquationsMenu extends javax.swing.JFrame
     // Run when Friedmann Equation select button is clicked
     private void btnSelectFriedmannActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectFriedmannActionPerformed
         // Switch to the Friedmann Equation screen
-        /*
         final FriedmannEquation friedmann = new FriedmannEquation();
         friedmann.setLocationRelativeTo(null); // Centre the window
         friedmann.setResizable(false); // Prevent window size from being changed
         friedmann.setVisible(true); // Show the Friedmann Equation screen window
         this.dispose(); // Close the current window
-         */
     }//GEN-LAST:event_btnSelectFriedmannActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

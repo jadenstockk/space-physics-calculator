@@ -21,8 +21,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
     private void initComponents()
     {
 
-        jSpinner1 = new javax.swing.JSpinner();
-        LorentzForcePanel = new javax.swing.JPanel();
+        MaxwellBoltzmannDistributionPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         txaDescription = new javax.swing.JTextArea();
         lblEquationMaxwell = new javax.swing.JLabel();
@@ -41,14 +40,15 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         lblParticleMassUnit = new javax.swing.JLabel();
         lblAbsoluteTemperatueUnit = new javax.swing.JLabel();
         lblParticleSpeedUnit = new javax.swing.JLabel();
+        lblNote = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
         setResizable(false);
 
-        LorentzForcePanel.setBackground(new java.awt.Color(32, 5, 60));
-        LorentzForcePanel.setMaximumSize(new java.awt.Dimension(800, 500));
-        LorentzForcePanel.setMinimumSize(new java.awt.Dimension(800, 500));
+        MaxwellBoltzmannDistributionPanel.setBackground(new java.awt.Color(32, 5, 60));
+        MaxwellBoltzmannDistributionPanel.setMaximumSize(new java.awt.Dimension(800, 500));
+        MaxwellBoltzmannDistributionPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
         lblTitle.setFont(new java.awt.Font("Monospaced", 1, 28)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 51, 51));
@@ -77,7 +77,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
 
         txfParticleMass.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         txfParticleMass.setText("0.0");
-        txfParticleMass.setToolTipText("Type in the electric charge here");
+        txfParticleMass.setToolTipText("Type in the particle mass here");
 
         lblAbsoluteTemperatue.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         lblAbsoluteTemperatue.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,7 +86,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
 
         txfAbsoluteTemperatue.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         txfAbsoluteTemperatue.setText("0.0");
-        txfAbsoluteTemperatue.setToolTipText("Type in the electric field here");
+        txfAbsoluteTemperatue.setToolTipText("Type in the absolute temperature here");
 
         lblParticleSpeed.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         lblParticleSpeed.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,7 +95,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
 
         txfParticleSpeed.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         txfParticleSpeed.setText("0.0");
-        txfParticleSpeed.setToolTipText("Type in the velocity here");
+        txfParticleSpeed.setToolTipText("Type in the particle speed here");
 
         txfOutput.setEditable(false);
         txfOutput.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
@@ -103,13 +103,6 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         txfOutput.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txfOutput.setText("OUTPUT: PD Function (fv) = 0.0 s/m");
         txfOutput.setToolTipText("The output probability density function of the equation with display here");
-        txfOutput.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txfOutputActionPerformed(evt);
-            }
-        });
 
         btnCalculate.setBackground(new java.awt.Color(200, 255, 200));
         btnCalculate.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -196,32 +189,39 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         lblParticleSpeedUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblParticleSpeedUnit.setText("m/s");
 
-        javax.swing.GroupLayout LorentzForcePanelLayout = new javax.swing.GroupLayout(LorentzForcePanel);
-        LorentzForcePanel.setLayout(LorentzForcePanelLayout);
-        LorentzForcePanelLayout.setHorizontalGroup(
-            LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+        lblNote.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        lblNote.setForeground(new java.awt.Color(255, 51, 51));
+        lblNote.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNote.setText("Note: there are constant variables in this equation that cannot be changed");
+
+        javax.swing.GroupLayout MaxwellBoltzmannDistributionPanelLayout = new javax.swing.GroupLayout(MaxwellBoltzmannDistributionPanel);
+        MaxwellBoltzmannDistributionPanel.setLayout(MaxwellBoltzmannDistributionPanelLayout);
+        MaxwellBoltzmannDistributionPanelLayout.setHorizontalGroup(
+            MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txaDescription, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                                     .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(45, 45, 45)))
-                            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+                            .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lblNote, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
+                                    .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                         .addGap(284, 284, 284)
                         .addComponent(lblEquationMaxwell)))
                 .addContainerGap(47, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -230,21 +230,21 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
                         .addGap(31, 31, 31)
                         .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
-                        .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
+                        .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                                 .addComponent(lblParticleSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32)
                                 .addComponent(txfParticleSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblParticleSpeedUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+                            .addGroup(MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                                 .addComponent(lblAbsoluteTemperatue, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32)
                                 .addComponent(txfAbsoluteTemperatue, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblAbsoluteTemperatueUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+                            .addGroup(MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                                 .addComponent(lblParticleMass, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32)
                                 .addComponent(txfParticleMass, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -252,39 +252,41 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
                                 .addComponent(lblParticleMassUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(63, 63, 63))))
         );
-        LorentzForcePanelLayout.setVerticalGroup(
-            LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+        MaxwellBoltzmannDistributionPanelLayout.setVerticalGroup(
+            MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MaxwellBoltzmannDistributionPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txaDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblEquationMaxwell)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblParticleMass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txfParticleMass, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblParticleMassUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblAbsoluteTemperatue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txfAbsoluteTemperatue, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblAbsoluteTemperatueUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblParticleSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txfParticleSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblParticleSpeedUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(26, 26, 26)
+                .addComponent(lblNote)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(MaxwellBoltzmannDistributionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnBack)
                     .addComponent(btnHelp)
@@ -296,11 +298,11 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LorentzForcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(MaxwellBoltzmannDistributionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LorentzForcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(MaxwellBoltzmannDistributionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -368,8 +370,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
 
                     } else
                     {
-                        System.out.println(eulersNumber);
-                        System.out.println(-((particleMass * Math.pow(particleSpeed, 2)) / (2 * boltzmannConstant * absoluteTemperature)));
+                     
                         // Calculate the probability density function that will be output
                         double pdFunction = Math.sqrt(Math.pow(particleMass / (2 * pi * boltzmannConstant * absoluteTemperature), 3))
                                 * 4 * pi * Math.pow(particleSpeed, 2)
@@ -394,23 +395,18 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         txfOutput.setText("OUTPUT: PD Function (fv) = 0.0 s/m");
     }//GEN-LAST:event_btnResetActionPerformed
 
-    private void txfOutputActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txfOutputActionPerformed
-    {//GEN-HEADEREND:event_txfOutputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txfOutputActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel LorentzForcePanel;
+    private javax.swing.JPanel MaxwellBoltzmannDistributionPanel;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCalculate;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnReset;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel lblAbsoluteTemperatue;
     private javax.swing.JLabel lblAbsoluteTemperatueUnit;
     private javax.swing.JLabel lblEquationMaxwell;
+    private javax.swing.JLabel lblNote;
     private javax.swing.JLabel lblParticleMass;
     private javax.swing.JLabel lblParticleMassUnit;
     private javax.swing.JLabel lblParticleSpeed;

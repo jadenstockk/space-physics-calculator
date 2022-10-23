@@ -21,7 +21,7 @@ public class DriftVelocity extends javax.swing.JFrame
     private void initComponents()
     {
 
-        LorentzForcePanel = new javax.swing.JPanel();
+        DriftVelocityEquation = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         txaDescription = new javax.swing.JTextArea();
         lblDriftVelocity = new javax.swing.JLabel();
@@ -40,14 +40,15 @@ public class DriftVelocity extends javax.swing.JFrame
         lblCurrentFlowUnit = new javax.swing.JLabel();
         lblFreeElectronDensityUnit = new javax.swing.JLabel();
         lblCurrentFlowUnit1 = new javax.swing.JLabel();
+        lblNote = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
         setResizable(false);
 
-        LorentzForcePanel.setBackground(new java.awt.Color(32, 5, 60));
-        LorentzForcePanel.setMaximumSize(new java.awt.Dimension(800, 500));
-        LorentzForcePanel.setMinimumSize(new java.awt.Dimension(800, 500));
+        DriftVelocityEquation.setBackground(new java.awt.Color(32, 5, 60));
+        DriftVelocityEquation.setMaximumSize(new java.awt.Dimension(800, 500));
+        DriftVelocityEquation.setMinimumSize(new java.awt.Dimension(800, 500));
 
         lblTitle.setFont(new java.awt.Font("Monospaced", 1, 28)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 204, 0));
@@ -188,11 +189,16 @@ public class DriftVelocity extends javax.swing.JFrame
         lblCurrentFlowUnit1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblCurrentFlowUnit1.setText("A");
 
-        javax.swing.GroupLayout LorentzForcePanelLayout = new javax.swing.GroupLayout(LorentzForcePanel);
-        LorentzForcePanel.setLayout(LorentzForcePanelLayout);
-        LorentzForcePanelLayout.setHorizontalGroup(
-            LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LorentzForcePanelLayout.createSequentialGroup()
+        lblNote.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        lblNote.setForeground(new java.awt.Color(255, 51, 51));
+        lblNote.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNote.setText("Note: there are constant variables in this equation that cannot be changed");
+
+        javax.swing.GroupLayout DriftVelocityEquationLayout = new javax.swing.GroupLayout(DriftVelocityEquation);
+        DriftVelocityEquation.setLayout(DriftVelocityEquationLayout);
+        DriftVelocityEquationLayout.setHorizontalGroup(
+            DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DriftVelocityEquationLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
@@ -202,79 +208,83 @@ public class DriftVelocity extends javax.swing.JFrame
                 .addGap(31, 31, 31)
                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(140, 140, 140))
-            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+            .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txaDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                        .addComponent(lblFreeElectronDensity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txfFreeElectronDensity, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                        .addComponent(lblCurrentFlow, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txfCurrentFlow))
-                                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                        .addComponent(lblCrossSectionalArea, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(32, 32, 32)
-                                        .addComponent(txfCrossSectionalArea, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblFreeElectronDensityUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblCurrentFlowUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblCurrentFlowUnit1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+                            .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                                .addGap(306, 306, 306)
+                                .addComponent(lblDriftVelocity))
+                            .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DriftVelocityEquationLayout.createSequentialGroup()
+                                    .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                                            .addComponent(lblFreeElectronDensity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(txfFreeElectronDensity, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                                            .addComponent(lblCrossSectionalArea, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(txfCrossSectionalArea, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                                            .addComponent(lblCurrentFlow, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(txfCurrentFlow, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblFreeElectronDensityUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblCurrentFlowUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblCurrentFlowUnit1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblNote, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                                        .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
                         .addGap(86, 86, 86)
-                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                        .addGap(335, 335, 335)
-                        .addComponent(lblDriftVelocity)))
+                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
-        LorentzForcePanelLayout.setVerticalGroup(
-            LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
+        DriftVelocityEquationLayout.setVerticalGroup(
+            DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txaDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDriftVelocity)
-                .addGap(27, 27, 27)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                        .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(LorentzForcePanelLayout.createSequentialGroup()
-                                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(28, 28, 28)
+                .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                        .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(DriftVelocityEquationLayout.createSequentialGroup()
+                                .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lblCurrentFlow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(txfCurrentFlow, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(lblCurrentFlowUnit1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lblFreeElectronDensity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txfFreeElectronDensity, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(lblFreeElectronDensityUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblCrossSectionalArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txfCrossSectionalArea, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(lblCurrentFlowUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(lblNote, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addGroup(LorentzForcePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(DriftVelocityEquationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnBack)
                     .addComponent(btnHelp)
@@ -286,11 +296,11 @@ public class DriftVelocity extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LorentzForcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(DriftVelocityEquation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LorentzForcePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(DriftVelocityEquation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -379,7 +389,7 @@ public class DriftVelocity extends javax.swing.JFrame
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel LorentzForcePanel;
+    private javax.swing.JPanel DriftVelocityEquation;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCalculate;
     private javax.swing.JButton btnExit;
@@ -392,6 +402,7 @@ public class DriftVelocity extends javax.swing.JFrame
     private javax.swing.JLabel lblDriftVelocity;
     private javax.swing.JLabel lblFreeElectronDensity;
     private javax.swing.JLabel lblFreeElectronDensityUnit;
+    private javax.swing.JLabel lblNote;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JTextArea txaDescription;
     private javax.swing.JTextField txfCrossSectionalArea;
