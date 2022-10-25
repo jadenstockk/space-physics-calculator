@@ -328,7 +328,7 @@ public class FriedmannEquation extends javax.swing.JFrame
                     double cosmicScaleFactor = Double.parseDouble(txfCosmicScaleFactor.getText());
                     double curvatureParameter = Double.parseDouble(txfCurvatureParameter.getText());
 
-                    // Create varaibles for each constant variable
+                    // Create variables for each constant variable
                     double gravitionalConstant = 6.6743e-11;
                     double cosmologicalConstant = 2.036e-35;
                     double speedLight = 299792458;

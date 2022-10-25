@@ -9,9 +9,6 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[500, 650]"/>
     </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[500, 650]"/>
-    </Property>
     <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[500, 650]"/>
@@ -152,10 +149,12 @@
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="lblQuestion1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblAnswer1P1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblAnswer1P2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnExitExample" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblAnswer1P1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAnswer1P2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   <Component id="lblQuestion2" min="-2" max="-2" attributes="0"/>
@@ -401,7 +400,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="HOW DO I TYPE IN THE VALUES FOR EACH VARAIBLE?"/>
+            <Property name="text" type="java.lang.String" value="HOW DO I TYPE IN THE VALUES FOR EACH VARIABLE?"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAnswer4P1">
@@ -412,7 +411,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Click on the text field next to the varaible you want"/>
+            <Property name="text" type="java.lang.String" value="Click on the text field next to the variable you want"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAnswer4P2">

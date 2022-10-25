@@ -208,13 +208,13 @@ public class SchwarzschildRadius extends javax.swing.JFrame
                 .addComponent(txaDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblEquationSchwarzschild)
-                .addGap(55, 55, 55)
+                .addGap(47, 47, 47)
                 .addGroup(SchwarzschildRadiusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblObjectMass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(SchwarzschildRadiusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txfObjectMass, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblObjectMassUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(lblNote)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SchwarzschildRadiusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -276,12 +276,16 @@ public class SchwarzschildRadius extends javax.swing.JFrame
 
             // Create variables and set their values to the associated text field values
             double objectMass = Double.parseDouble(txfObjectMass.getText());
+            
+            // Create variables for each constant variable
+            double gravitionalConstant = 6.6743e-11;
+            double speedLight = 299792458;
 
-            // Calculate the dynamic pressure that will be output
-            double dynamicPressure = 0;
+            // Calculate the event horizon that will be output
+            double eventHorizon = (2 * gravitionalConstant * objectMass) / Math.pow(speedLight, 2);
 
-            // Set the output text field to the previously calculated dynamic pressure
-            txfOutput.setText("OUTPUT: Dyanmic Pressure (q) = " + dynamicPressure + " Pa");
+            // Set the output text field to the previously calculated event horizon
+            txfOutput.setText("OUTPUT: Event Horizon (rs) = " + eventHorizon + " km");
 
         }
     }//GEN-LAST:event_btnCalculateActionPerformed
@@ -290,7 +294,7 @@ public class SchwarzschildRadius extends javax.swing.JFrame
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // Set each text field to their default value
         txfObjectMass.setText("0.0");
-        txfOutput.setText("OUTPUT: Dyanmic Pressure (q) = 0.0 Pa");
+        txfOutput.setText("OUTPUT: Event Horizon (rs) = 0.0 km");
     }//GEN-LAST:event_btnResetActionPerformed
 
 

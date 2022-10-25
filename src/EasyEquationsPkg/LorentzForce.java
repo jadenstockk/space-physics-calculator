@@ -354,7 +354,7 @@ public class LorentzForce extends javax.swing.JFrame
         // Check/validate whether each text field value is a valid double else display an error
         if (validate.vDouble(txfElectricCharge.getText(), "The Electric Charge value is invalid. Please enter a valid value and try again."))
         {
-            if (validate.vDouble(txfExternalElectricField.getText(), "The Electric Field value is invalid. Please enter a valid value and try again."))
+            if (validate.vDouble(txfExternalElectricField.getText(), "The External Electric Field value is invalid. Please enter a valid value and try again."))
             {
                 if (validate.vDouble(txfVelocity.getText(), "The Velocity value is invalid. Please enter a valid value and try again."))
                 {

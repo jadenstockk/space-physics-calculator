@@ -101,7 +101,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         txfOutput.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         txfOutput.setForeground(new java.awt.Color(0, 80, 0));
         txfOutput.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txfOutput.setText("OUTPUT: PD Function (fv) = 0.0 s/m");
+        txfOutput.setText("OUTPUT: PD Function (fv) = undefined s/m");
         txfOutput.setToolTipText("The output probability density function of the equation with display here");
 
         btnCalculate.setBackground(new java.awt.Color(200, 255, 200));
@@ -348,7 +348,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
                     double absoluteTemperature = Double.parseDouble(txfAbsoluteTemperatue.getText());
                     double particleSpeed = Double.parseDouble(txfParticleSpeed.getText());
 
-                    // Create varaibles for each constant variable
+                    // Create variables for each constant variable
                     double boltzmannConstant = 1.3806488;
                     double eulersNumber = Math.E;
                     double pi = Math.PI;
@@ -392,7 +392,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         txfParticleMass.setText("0.0");
         txfAbsoluteTemperatue.setText("0.0");
         txfParticleSpeed.setText("0.0");
-        txfOutput.setText("OUTPUT: PD Function (fv) = 0.0 s/m");
+        txfOutput.setText("OUTPUT: PD Function (fv) = undefined s/m");
     }//GEN-LAST:event_btnResetActionPerformed
 
 

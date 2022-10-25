@@ -294,7 +294,7 @@
               <Color blue="0" green="50" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="OUTPUT: PD Function (fv) = 0.0 s/m"/>
+            <Property name="text" type="java.lang.String" value="OUTPUT: PD Function (fv) = undefined s/m"/>
             <Property name="toolTipText" type="java.lang.String" value="The output probability density function of the equation with display here"/>
           </Properties>
         </Component>

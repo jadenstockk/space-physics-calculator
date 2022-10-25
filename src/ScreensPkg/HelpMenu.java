@@ -10,7 +10,8 @@ public class HelpMenu extends javax.swing.JFrame {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         HelpMenuPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
@@ -35,7 +36,6 @@ public class HelpMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(500, 650));
         setMinimumSize(new java.awt.Dimension(500, 650));
-        setPreferredSize(new java.awt.Dimension(500, 650));
         setResizable(false);
         setSize(new java.awt.Dimension(500, 650));
 
@@ -71,8 +71,10 @@ public class HelpMenu extends javax.swing.JFrame {
         btnExitExample.setText("Exit");
         btnExitExample.setToolTipText("When you see this button, click it to exit the program");
         btnExitExample.setIconTextGap(8);
-        btnExitExample.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnExitExample.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnExitExampleActionPerformed(evt);
             }
         });
@@ -95,8 +97,10 @@ public class HelpMenu extends javax.swing.JFrame {
         btnSelectExample.setText("Select");
         btnSelectExample.setToolTipText("When you see this button, click it to open the above equation");
         btnSelectExample.setIconTextGap(8);
-        btnSelectExample.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSelectExample.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnSelectExampleActionPerformed(evt);
             }
         });
@@ -119,8 +123,10 @@ public class HelpMenu extends javax.swing.JFrame {
         btnBackExample.setText("Back");
         btnBackExample.setToolTipText("When you see this button, click it to go back to the previous screen");
         btnBackExample.setIconTextGap(8);
-        btnBackExample.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnBackExample.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnBackExampleActionPerformed(evt);
             }
         });
@@ -135,8 +141,10 @@ public class HelpMenu extends javax.swing.JFrame {
         btnCloseHelp.setText("Close Help Menu");
         btnCloseHelp.setToolTipText("Click here to exit the program");
         btnCloseHelp.setIconTextGap(8);
-        btnCloseHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnCloseHelp.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 btnCloseHelpActionPerformed(evt);
             }
         });
@@ -144,11 +152,11 @@ public class HelpMenu extends javax.swing.JFrame {
         lblQuestion4.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         lblQuestion4.setForeground(new java.awt.Color(255, 255, 255));
         lblQuestion4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblQuestion4.setText("HOW DO I TYPE IN THE VALUES FOR EACH VARAIBLE?");
+        lblQuestion4.setText("HOW DO I TYPE IN THE VALUES FOR EACH VARIABLE?");
 
         lblAnswer4P1.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
         lblAnswer4P1.setForeground(new java.awt.Color(255, 255, 255));
-        lblAnswer4P1.setText("Click on the text field next to the varaible you want");
+        lblAnswer4P1.setText("Click on the text field next to the variable you want");
 
         lblAnswer4P2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         lblAnswer4P2.setForeground(new java.awt.Color(255, 255, 255));
@@ -224,10 +232,11 @@ public class HelpMenu extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(lblQuestion1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(HelpMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAnswer1P1)
-                    .addComponent(lblAnswer1P2)
-                    .addComponent(btnExitExample, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(HelpMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnExitExample, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(HelpMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblAnswer1P1)
+                        .addComponent(lblAnswer1P2)))
                 .addGap(55, 55, 55)
                 .addComponent(lblQuestion2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
