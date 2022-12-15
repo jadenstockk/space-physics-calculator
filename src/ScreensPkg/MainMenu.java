@@ -15,8 +15,8 @@ public class MainMenu extends javax.swing.JFrame
     {
 
         MenuScreenPanel = new javax.swing.JPanel();
-        lblDescription = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
+        lblDescription = new javax.swing.JLabel();
         btnEasyEquations = new javax.swing.JButton();
         btnMediumEquations = new javax.swing.JButton();
         btnDifficultEquations = new javax.swing.JButton();
@@ -32,15 +32,15 @@ public class MainMenu extends javax.swing.JFrame
         MenuScreenPanel.setMaximumSize(new java.awt.Dimension(800, 500));
         MenuScreenPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
-        lblDescription.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
-        lblDescription.setForeground(new java.awt.Color(255, 255, 255));
-        lblDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDescription.setText("Space Physics Calculator");
-
         lblTitle.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("MAIN MENU");
+
+        lblDescription.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        lblDescription.setForeground(new java.awt.Color(255, 255, 255));
+        lblDescription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDescription.setText("Space Physics Calculator");
 
         btnEasyEquations.setBackground(new java.awt.Color(255, 255, 255));
         btnEasyEquations.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
@@ -167,33 +167,33 @@ public class MainMenu extends javax.swing.JFrame
     // Run when Easy Equations button is clicked
     private void btnEasyEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnEasyEquationsActionPerformed
     {//GEN-HEADEREND:event_btnEasyEquationsActionPerformed
-        // Switch to the Easy Equations screen
+        // Switch to the Easy Equations menu screen
         final EasyEquationsMenu easy = new EasyEquationsMenu();
         easy.setLocationRelativeTo(null); // Centre the window
         easy.setResizable(false); // Prevent window size from being changed
-        easy.setVisible(true); // Show the Easy Equations screen window
+        easy.setVisible(true); // Show the Easy Equations menu screen window
         this.dispose(); // Close the current window
     }//GEN-LAST:event_btnEasyEquationsActionPerformed
 
     // Run when Difficult Equations button is clicked
     private void btnDifficultEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnDifficultEquationsActionPerformed
     {//GEN-HEADEREND:event_btnDifficultEquationsActionPerformed
-        // Switch to the Difficult Equations screen
+        // Switch to the Difficult Equations menu screen
         final DifficultEquationsMenu difficult = new DifficultEquationsMenu();
         difficult.setLocationRelativeTo(null); // Centre the window
         difficult.setResizable(false); // Prevent window size from being changed
-        difficult.setVisible(true); // Show the Difficult Equations screen window
+        difficult.setVisible(true); // Show the Difficult Equations menu screen window
         this.dispose(); // Close the current window
     }//GEN-LAST:event_btnDifficultEquationsActionPerformed
 
     // Run when Medium Equations button is clicked
     private void btnMediumEquationsActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMediumEquationsActionPerformed
     {//GEN-HEADEREND:event_btnMediumEquationsActionPerformed
-        // Switch to the Medium Equations screen
+        // Switch to the Medium Equations menu screen
         final MediumEquationsMenu medium = new MediumEquationsMenu();
         medium.setLocationRelativeTo(null); // Centre the window
         medium.setResizable(false); // Prevent window size from being changed
-        medium.setVisible(true); // Show the Medium Equations screen window
+        medium.setVisible(true); // Show the Medium Equations menu screen window
         this.dispose(); // Close the current windowÏ
     }//GEN-LAST:event_btnMediumEquationsActionPerformed
 

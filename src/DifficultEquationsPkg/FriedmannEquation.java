@@ -2,7 +2,6 @@ package DifficultEquationsPkg;
 
 import ScreensPkg.*; // Import the screens package
 import Other.Validation; // Import the Validation class
-import javax.swing.JOptionPane; // Import JOptionPane
 
 public class FriedmannEquation extends javax.swing.JFrame
 {
@@ -180,27 +179,12 @@ public class FriedmannEquation extends javax.swing.JFrame
         lblNote.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         lblNote.setForeground(new java.awt.Color(255, 51, 51));
         lblNote.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNote.setText("Note: there are constant variables in this equation that cannot be changed");
+        lblNote.setText("Note: there are constant variables in this equation that cannot be changed as well as variables without units");
 
         javax.swing.GroupLayout FriedmannEquationPanelLayout = new javax.swing.GroupLayout(FriedmannEquationPanel);
         FriedmannEquationPanel.setLayout(FriedmannEquationPanelLayout);
         FriedmannEquationPanelLayout.setHorizontalGroup(
             FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FriedmannEquationPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FriedmannEquationPanelLayout.createSequentialGroup()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(btnHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FriedmannEquationPanelLayout.createSequentialGroup()
-                        .addComponent(lblEquationFriedmann)
-                        .addGap(223, 223, 223))))
             .addGroup(FriedmannEquationPanelLayout.createSequentialGroup()
                 .addGroup(FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FriedmannEquationPanelLayout.createSequentialGroup()
@@ -211,12 +195,10 @@ public class FriedmannEquation extends javax.swing.JFrame
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FriedmannEquationPanelLayout.createSequentialGroup()
                                     .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(45, 45, 45)))
-                            .addGroup(FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(lblNote, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FriedmannEquationPanelLayout.createSequentialGroup()
-                                    .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(FriedmannEquationPanelLayout.createSequentialGroup()
+                                .addComponent(txfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(FriedmannEquationPanelLayout.createSequentialGroup()
                         .addGap(63, 63, 63)
                         .addGroup(FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,6 +217,25 @@ public class FriedmannEquation extends javax.swing.JFrame
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblDensityUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(47, Short.MAX_VALUE))
+            .addGroup(FriedmannEquationPanelLayout.createSequentialGroup()
+                .addContainerGap(147, Short.MAX_VALUE)
+                .addGroup(FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FriedmannEquationPanelLayout.createSequentialGroup()
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(btnHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(140, 140, 140))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FriedmannEquationPanelLayout.createSequentialGroup()
+                        .addComponent(lblEquationFriedmann)
+                        .addGap(223, 223, 223))))
+            .addGroup(FriedmannEquationPanelLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(lblNote)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         FriedmannEquationPanelLayout.setVerticalGroup(
             FriedmannEquationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,7 +324,7 @@ public class FriedmannEquation extends javax.swing.JFrame
                 if (validate.vDouble(txfCurvatureParameter.getText(), "The Curvature Parameter is invalid. Please enter a valid value and try again."))
                 {
 
-                    // Create variables and set their values to the associated text field values
+                    // Create double variables and set their values to the associated parsed double text field values
                     double density = Double.parseDouble(txfDensity.getText());
                     double cosmicScaleFactor = Double.parseDouble(txfCosmicScaleFactor.getText());
                     double curvatureParameter = Double.parseDouble(txfCurvatureParameter.getText());

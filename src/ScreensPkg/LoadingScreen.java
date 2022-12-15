@@ -1,6 +1,6 @@
 package ScreensPkg;
 
-import java.awt.Color;
+// Import timer packages for loading screen
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -18,12 +18,13 @@ public class LoadingScreen extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         LoadingScreenPanel = new javax.swing.JPanel();
         lblLoadingImage = new javax.swing.JLabel();
-        pbLoading = new javax.swing.JProgressBar();
         lblProgress = new javax.swing.JLabel();
+        pbLoading = new javax.swing.JProgressBar();
         lblInformation = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -98,7 +99,7 @@ public class LoadingScreen extends javax.swing.JFrame
         loading.setLocationRelativeTo(null); // Centre the window
         loading.setResizable(false); // Prevent window size from being changed
         loading.setVisible(true); // Show the loading screen window
-       
+
         // Create a new timer
         final Timer timer = new Timer();
 
@@ -107,9 +108,11 @@ public class LoadingScreen extends javax.swing.JFrame
         {
             public void run()
             {
-                loadingPercent++;
+
+                loadingPercent++; // Increase the loading percent by 1
                 if (loadingPercent < 101)
                 {
+                    // Set the loading process bar and the loading text to the current percent
                     loading.pbLoading.setValue(loadingPercent);
                     loading.lblProgress.setText("Loading Space Physics Equations... " + loadingPercent + "%");
 
@@ -118,12 +121,12 @@ public class LoadingScreen extends javax.swing.JFrame
                     // Once the loading percentage is over 100 switch to the menu screen
                     timer.cancel();
                     loading.lblProgress.setText("Loading Space Physics Equations... Done");
-                    
-                    // Switch to menu screen
+
+                    // Switch to the main menu screen
                     final MainMenu menu = new MainMenu();
                     menu.setLocationRelativeTo(null); // Centre the window
                     menu.setResizable(false); // Prevent the window size from being changed
-                    menu.setVisible(true); // Show the menu screen window
+                    menu.setVisible(true); // Show the main menu screen window
                     loading.dispose(); // Close the current window
                 }
             }

@@ -1,10 +1,11 @@
-
 package ScreensPkg;
 
-public class HelpMenu extends javax.swing.JFrame {
+public class HelpMenu extends javax.swing.JFrame
+{
 
     // Creates new HelpMenu frame
-    public HelpMenu() {
+    public HelpMenu()
+    {
         initComponents();
     }
 
@@ -28,10 +29,10 @@ public class HelpMenu extends javax.swing.JFrame {
         lblAnswer3P1 = new javax.swing.JLabel();
         btnBackExample = new javax.swing.JButton();
         lblAnswer3P2 = new javax.swing.JLabel();
-        btnCloseHelp = new javax.swing.JButton();
         lblQuestion4 = new javax.swing.JLabel();
         lblAnswer4P1 = new javax.swing.JLabel();
         lblAnswer4P2 = new javax.swing.JLabel();
+        btnCloseHelp = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(500, 650));
@@ -71,13 +72,6 @@ public class HelpMenu extends javax.swing.JFrame {
         btnExitExample.setText("Exit");
         btnExitExample.setToolTipText("When you see this button, click it to exit the program");
         btnExitExample.setIconTextGap(8);
-        btnExitExample.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnExitExampleActionPerformed(evt);
-            }
-        });
 
         lblAnswer1P2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         lblAnswer1P2.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,13 +91,6 @@ public class HelpMenu extends javax.swing.JFrame {
         btnSelectExample.setText("Select");
         btnSelectExample.setToolTipText("When you see this button, click it to open the above equation");
         btnSelectExample.setIconTextGap(8);
-        btnSelectExample.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnSelectExampleActionPerformed(evt);
-            }
-        });
 
         lblAnswer2P2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         lblAnswer2P2.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,17 +110,23 @@ public class HelpMenu extends javax.swing.JFrame {
         btnBackExample.setText("Back");
         btnBackExample.setToolTipText("When you see this button, click it to go back to the previous screen");
         btnBackExample.setIconTextGap(8);
-        btnBackExample.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnBackExampleActionPerformed(evt);
-            }
-        });
 
         lblAnswer3P2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         lblAnswer3P2.setForeground(new java.awt.Color(255, 255, 255));
         lblAnswer3P2.setText("until you see the main menu.");
+
+        lblQuestion4.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblQuestion4.setForeground(new java.awt.Color(255, 255, 255));
+        lblQuestion4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblQuestion4.setText("HOW DO I TYPE IN THE VALUES FOR EACH VARIABLE?");
+
+        lblAnswer4P1.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
+        lblAnswer4P1.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnswer4P1.setText("Click on the text field next to the variable you want");
+
+        lblAnswer4P2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        lblAnswer4P2.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnswer4P2.setText("to change and then type in the new value.");
 
         btnCloseHelp.setBackground(new java.awt.Color(255, 255, 255));
         btnCloseHelp.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -148,19 +141,6 @@ public class HelpMenu extends javax.swing.JFrame {
                 btnCloseHelpActionPerformed(evt);
             }
         });
-
-        lblQuestion4.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
-        lblQuestion4.setForeground(new java.awt.Color(255, 255, 255));
-        lblQuestion4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblQuestion4.setText("HOW DO I TYPE IN THE VALUES FOR EACH VARIABLE?");
-
-        lblAnswer4P1.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
-        lblAnswer4P1.setForeground(new java.awt.Color(255, 255, 255));
-        lblAnswer4P1.setText("Click on the text field next to the variable you want");
-
-        lblAnswer4P2.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
-        lblAnswer4P2.setForeground(new java.awt.Color(255, 255, 255));
-        lblAnswer4P2.setText("to change and then type in the new value.");
 
         javax.swing.GroupLayout HelpMenuPanelLayout = new javax.swing.GroupLayout(HelpMenuPanel);
         HelpMenuPanel.setLayout(HelpMenuPanelLayout);
@@ -277,22 +257,11 @@ public class HelpMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Run when the close help menu button is clicked
     private void btnCloseHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseHelpActionPerformed
         // Close the help menu
         this.dispose();
     }//GEN-LAST:event_btnCloseHelpActionPerformed
-
-    private void btnExitExampleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitExampleActionPerformed
-        // Nothing happens when the button is clicked because this is an example button
-    }//GEN-LAST:event_btnExitExampleActionPerformed
-
-    private void btnSelectExampleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectExampleActionPerformed
-        // Nothing happens when the button is clicked because this is an example button
-    }//GEN-LAST:event_btnSelectExampleActionPerformed
-
-    private void btnBackExampleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackExampleActionPerformed
-        // Nothing happens when the button is clicked because this is an example button
-    }//GEN-LAST:event_btnBackExampleActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel HelpMenuPanel;

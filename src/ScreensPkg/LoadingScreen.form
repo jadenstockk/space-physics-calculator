@@ -96,8 +96,6 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JProgressBar" name="pbLoading">
-        </Component>
         <Component class="javax.swing.JLabel" name="lblProgress">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -109,6 +107,8 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Loading Space Physics Equations... 0%"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="pbLoading">
         </Component>
         <Component class="javax.swing.JLabel" name="lblInformation">
           <Properties>

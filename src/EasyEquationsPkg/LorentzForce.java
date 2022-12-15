@@ -87,7 +87,7 @@ public class LorentzForce extends javax.swing.JFrame
 
         txfExternalElectricField.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         txfExternalElectricField.setText("0.0");
-        txfExternalElectricField.setToolTipText("Type in the electric field here");
+        txfExternalElectricField.setToolTipText("Type in the external electric field here");
 
         lblVelocity.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         lblVelocity.setForeground(new java.awt.Color(255, 255, 255));
@@ -361,7 +361,7 @@ public class LorentzForce extends javax.swing.JFrame
                     if (validate.vDouble(txfMagneticField.getText(), "The Magentic Field value is invalid. Please enter a valid value and try again."))
                     {
 
-                        // Create variables and set their values to the associated text field values
+                        // Create double variables and set their values to the associated parsed double text field values
                         double electricCharge = Double.parseDouble(txfElectricCharge.getText());
                         double externalElectricField = Double.parseDouble(txfExternalElectricField.getText());
                         double velocity = Double.parseDouble(txfVelocity.getText());

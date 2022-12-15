@@ -340,10 +340,10 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
         {
             if (validate.vDouble(txfAbsoluteTemperatue.getText(), "The Absolute Temperature value is invalid. Please enter a valid value and try again."))
             {
-                if (validate.vDouble(txfParticleSpeed.getText(), "The Particle Speed is invalid. Please enter a valid value and try again."))
+                if (validate.vDouble(txfParticleSpeed.getText(), "The Particle Speed value is invalid. Please enter a valid value and try again."))
                 {
 
-                    // Create variables and set their values to the associated text field values
+                    // Create double variables and set their values to the associated parsed double text field values
                     double particleMass = Double.parseDouble(txfParticleMass.getText());
                     double absoluteTemperature = Double.parseDouble(txfAbsoluteTemperatue.getText());
                     double particleSpeed = Double.parseDouble(txfParticleSpeed.getText());
@@ -354,7 +354,7 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
                     double pi = Math.PI;
 
                     // If any of the denominator variables are 0 (undefined) then store an error message in the error variable
-                    String error = "";
+                    String error = ""; // Create the error message variable and assign it a blank value
                     if (particleMass == 0)
                     {
                         error = "The Particle Mass value cannot be 0. Please enter a valid value and try again.";
@@ -363,14 +363,14 @@ public class MaxwellBoltzmannDistribution extends javax.swing.JFrame
                         error = "The Absolute Temperature value cannot be 0. Please enter a valid value and try again.";
                     }
 
-                    // If one of the denominator variables are 0 then don't run the calculation, display the error message
+                    // If one of the denominator variables are 0 then don't run the calculation, display the error message through JOptionPane. Else calculate and display the answer to the equation.
                     if (error.length() > 0)
                     {
                         JOptionPane.showMessageDialog(null, error, "Error", JOptionPane.ERROR_MESSAGE);
 
                     } else
                     {
-                     
+
                         // Calculate the probability density function that will be output
                         double pdFunction = Math.sqrt(Math.pow(particleMass / (2 * pi * boltzmannConstant * absoluteTemperature), 3))
                                 * 4 * pi * Math.pow(particleSpeed, 2)

@@ -253,9 +253,6 @@
             <Property name="toolTipText" type="java.lang.String" value="When you see this button, click it to exit the program"/>
             <Property name="iconTextGap" type="int" value="8"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitExampleActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAnswer1P2">
           <Properties>
@@ -305,9 +302,6 @@
             <Property name="toolTipText" type="java.lang.String" value="When you see this button, click it to open the above equation"/>
             <Property name="iconTextGap" type="int" value="8"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectExampleActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAnswer2P2">
           <Properties>
@@ -357,9 +351,6 @@
             <Property name="toolTipText" type="java.lang.String" value="When you see this button, click it to go back to the previous screen"/>
             <Property name="iconTextGap" type="int" value="8"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackExampleActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblAnswer3P2">
           <Properties>
@@ -371,25 +362,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="until you see the main menu."/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnCloseHelp">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Monospaced" size="14" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ImagesPkg/ExitIcon.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Close Help Menu"/>
-            <Property name="toolTipText" type="java.lang.String" value="Click here to exit the program"/>
-            <Property name="iconTextGap" type="int" value="8"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCloseHelpActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblQuestion4">
           <Properties>
@@ -424,6 +396,25 @@
             </Property>
             <Property name="text" type="java.lang.String" value="to change and then type in the new value."/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCloseHelp">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Monospaced" size="14" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/ImagesPkg/ExitIcon.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Close Help Menu"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click here to exit the program"/>
+            <Property name="iconTextGap" type="int" value="8"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCloseHelpActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

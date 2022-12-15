@@ -16,7 +16,7 @@ public class MediumEquationsMenu extends javax.swing.JFrame
     private void initComponents()
     {
 
-        EasyEquationsPanel = new javax.swing.JPanel();
+        MediumEquationsPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         lblDescription = new javax.swing.JLabel();
         lblTitleDynamic = new javax.swing.JLabel();
@@ -26,16 +26,16 @@ public class MediumEquationsMenu extends javax.swing.JFrame
         lblEquationSchwardzschild = new javax.swing.JLabel();
         btnSelectSchwardzschild = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        btnExit = new javax.swing.JButton();
         btnHelp = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
         setResizable(false);
 
-        EasyEquationsPanel.setBackground(new java.awt.Color(32, 5, 60));
-        EasyEquationsPanel.setMaximumSize(new java.awt.Dimension(800, 500));
-        EasyEquationsPanel.setMinimumSize(new java.awt.Dimension(800, 500));
+        MediumEquationsPanel.setBackground(new java.awt.Color(32, 5, 60));
+        MediumEquationsPanel.setMaximumSize(new java.awt.Dimension(800, 500));
+        MediumEquationsPanel.setMinimumSize(new java.awt.Dimension(800, 500));
 
         lblTitle.setFont(new java.awt.Font("Monospaced", 1, 28)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 153, 51));
@@ -104,20 +104,6 @@ public class MediumEquationsMenu extends javax.swing.JFrame
             }
         });
 
-        btnExit.setBackground(new java.awt.Color(255, 255, 255));
-        btnExit.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ExitIcon.png"))); // NOI18N
-        btnExit.setText("Exit");
-        btnExit.setToolTipText("Click here to exit the program");
-        btnExit.setIconTextGap(8);
-        btnExit.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnExitActionPerformed(evt);
-            }
-        });
-
         btnHelp.setBackground(new java.awt.Color(255, 255, 255));
         btnHelp.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         btnHelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/HelpIcon.png"))); // NOI18N
@@ -132,27 +118,41 @@ public class MediumEquationsMenu extends javax.swing.JFrame
             }
         });
 
-        javax.swing.GroupLayout EasyEquationsPanelLayout = new javax.swing.GroupLayout(EasyEquationsPanel);
-        EasyEquationsPanel.setLayout(EasyEquationsPanelLayout);
-        EasyEquationsPanelLayout.setHorizontalGroup(
-            EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
+        btnExit.setBackground(new java.awt.Color(255, 255, 255));
+        btnExit.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ExitIcon.png"))); // NOI18N
+        btnExit.setText("Exit");
+        btnExit.setToolTipText("Click here to exit the program");
+        btnExit.setIconTextGap(8);
+        btnExit.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnExitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout MediumEquationsPanelLayout = new javax.swing.GroupLayout(MediumEquationsPanel);
+        MediumEquationsPanel.setLayout(MediumEquationsPanelLayout);
+        MediumEquationsPanelLayout.setHorizontalGroup(
+            MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MediumEquationsPanelLayout.createSequentialGroup()
                 .addGap(87, 87, 87)
-                .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
-                        .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addGroup(MediumEquationsPanelLayout.createSequentialGroup()
+                        .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblTitleDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(lblTitleSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 95, Short.MAX_VALUE))
-            .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
+            .addGroup(MediumEquationsPanelLayout.createSequentialGroup()
                 .addGap(212, 212, 212)
                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
@@ -161,27 +161,27 @@ public class MediumEquationsMenu extends javax.swing.JFrame
                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        EasyEquationsPanelLayout.setVerticalGroup(
-            EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EasyEquationsPanelLayout.createSequentialGroup()
+        MediumEquationsPanelLayout.setVerticalGroup(
+            MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MediumEquationsPanelLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
-                .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTitleDynamic)
                     .addComponent(lblTitleSchwardzschild))
                 .addGap(1, 1, 1)
-                .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblEquationSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEquationDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSelectSchwardzschild, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSelectDynamic, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
-                .addGroup(EasyEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(MediumEquationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnBack)
                     .addComponent(btnHelp))
@@ -192,11 +192,11 @@ public class MediumEquationsMenu extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EasyEquationsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(MediumEquationsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EasyEquationsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(MediumEquationsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -251,7 +251,7 @@ public class MediumEquationsMenu extends javax.swing.JFrame
     }//GEN-LAST:event_btnSelectSchwardzschildActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel EasyEquationsPanel;
+    private javax.swing.JPanel MediumEquationsPanel;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHelp;

@@ -26,16 +26,16 @@ public class DynamicPressure extends javax.swing.JFrame
         lblEquationDyanmic = new javax.swing.JLabel();
         lblFluidMassDensity = new javax.swing.JLabel();
         txfFluidMassDensity = new javax.swing.JTextField();
+        lblFluidMassDensityUnit = new javax.swing.JLabel();
         lblFlowSpeed = new javax.swing.JLabel();
         txfFlowSpeed = new javax.swing.JTextField();
+        lblFlowSpeedUnit = new javax.swing.JLabel();
         txfOutput = new javax.swing.JTextField();
         btnCalculate = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
         btnHelp = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        btnReset = new javax.swing.JButton();
-        lblFluidMassDensityUnit = new javax.swing.JLabel();
-        lblFlowSpeedUnit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
@@ -74,6 +74,11 @@ public class DynamicPressure extends javax.swing.JFrame
         txfFluidMassDensity.setText("0.0");
         txfFluidMassDensity.setToolTipText("Type in the fluid mass density here");
 
+        lblFluidMassDensityUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblFluidMassDensityUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblFluidMassDensityUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblFluidMassDensityUnit.setText("kg/m^3");
+
         lblFlowSpeed.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         lblFlowSpeed.setForeground(new java.awt.Color(255, 255, 255));
         lblFlowSpeed.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -82,6 +87,11 @@ public class DynamicPressure extends javax.swing.JFrame
         txfFlowSpeed.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         txfFlowSpeed.setText("0.0");
         txfFlowSpeed.setToolTipText("Type in the flow speed here");
+
+        lblFlowSpeedUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblFlowSpeedUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblFlowSpeedUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblFlowSpeedUnit.setText("m/s");
 
         txfOutput.setEditable(false);
         txfOutput.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
@@ -108,13 +118,27 @@ public class DynamicPressure extends javax.swing.JFrame
         btnBack.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/BackIcon.png"))); // NOI18N
         btnBack.setText("Back");
-        btnBack.setToolTipText("Click here to go back to the easy equations menu");
+        btnBack.setToolTipText("Click here to go back to the medium equations menu");
         btnBack.setIconTextGap(8);
         btnBack.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 btnBackActionPerformed(evt);
+            }
+        });
+
+        btnReset.setBackground(new java.awt.Color(255, 255, 255));
+        btnReset.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ResetIcon.png"))); // NOI18N
+        btnReset.setText("Reset");
+        btnReset.setToolTipText("Click here to reset all the variable fields to their default values");
+        btnReset.setIconTextGap(8);
+        btnReset.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnResetActionPerformed(evt);
             }
         });
 
@@ -145,30 +169,6 @@ public class DynamicPressure extends javax.swing.JFrame
                 btnExitActionPerformed(evt);
             }
         });
-
-        btnReset.setBackground(new java.awt.Color(255, 255, 255));
-        btnReset.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ResetIcon.png"))); // NOI18N
-        btnReset.setText("Reset");
-        btnReset.setToolTipText("Click here to reset all the variable fields to their default values");
-        btnReset.setIconTextGap(8);
-        btnReset.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnResetActionPerformed(evt);
-            }
-        });
-
-        lblFluidMassDensityUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
-        lblFluidMassDensityUnit.setForeground(new java.awt.Color(255, 255, 255));
-        lblFluidMassDensityUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblFluidMassDensityUnit.setText("kg/m^3");
-
-        lblFlowSpeedUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
-        lblFlowSpeedUnit.setForeground(new java.awt.Color(255, 255, 255));
-        lblFlowSpeedUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblFlowSpeedUnit.setText("m/s");
 
         javax.swing.GroupLayout DynamicPressurePanelLayout = new javax.swing.GroupLayout(DynamicPressurePanel);
         DynamicPressurePanel.setLayout(DynamicPressurePanelLayout);
@@ -298,7 +298,7 @@ public class DynamicPressure extends javax.swing.JFrame
             if (validate.vDouble(txfFlowSpeed.getText(), "The Flow Speed value is invalid. Please enter a valid value and try again."))
             {
 
-                // Create variables and set their values to the associated text field values
+                // Create double variables and set their values to the associated parsed double text field values
                 double fluidMassDensity = Double.parseDouble(txfFluidMassDensity.getText());
                 double flowSpeed = Double.parseDouble(txfFlowSpeed.getText());
 

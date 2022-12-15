@@ -340,16 +340,16 @@ public class DriftVelocity extends javax.swing.JFrame
             {
                 if (validate.vDouble(txfCrossSectionalArea.getText(), "The Cross Sectional Area value is invalid. Please enter a valid value and try again."))
                 {
-                    // Create variables and set their values to the associated text field values
+                    // Create double variables and set their values to the associated parsed double text field values
                     double currentFlow = Double.parseDouble(txfCurrentFlow.getText());
                     double freeElectronDensity = Double.parseDouble(txfFreeElectronDensity.getText());
                     double crossSectionalArea = Double.parseDouble(txfCrossSectionalArea.getText());
-                    
-                    // Create varaible for constant electron charge variable
+
+                    // Create variable for constant electron charge
                     double electronCharge = 1.602 * 10e-19;
 
                     // If either of the denominator variables are 0 (undefined) then store an error message in the error variable
-                    String error = "";
+                    String error = ""; // Create error variable and assign a blank value
                     if (freeElectronDensity == 0)
                     {
                         error = "The Free Electron Density value cannot be 0. Please enter a valid value and try again.";
@@ -358,14 +358,14 @@ public class DriftVelocity extends javax.swing.JFrame
                         error = "The Cross Sectional Area value cannot be 0. Please enter a valid value and try again.";
                     }
 
-                    // If one of the denominator variables are 0 then don't run the calculation, display the error message
+                    // If one of the denominator variables are 0 then don't run the calculation, display the error message through JOptionPane. Else, calculate the result
                     if (error.length() > 0)
                     {
                         JOptionPane.showMessageDialog(null, error, "Error", JOptionPane.ERROR_MESSAGE);
 
                     } else
                     {
-                        
+
                         // Calculate the drift velocity that will be output
                         double driftVelocity = currentFlow / (freeElectronDensity * electronCharge * crossSectionalArea);
 

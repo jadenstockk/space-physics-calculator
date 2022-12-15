@@ -26,14 +26,14 @@ public class SchwarzschildRadius extends javax.swing.JFrame
         lblEquationSchwarzschild = new javax.swing.JLabel();
         lblObjectMass = new javax.swing.JLabel();
         txfObjectMass = new javax.swing.JTextField();
+        lblObjectMassUnit = new javax.swing.JLabel();
+        lblNote = new javax.swing.JLabel();
         txfOutput = new javax.swing.JTextField();
         btnCalculate = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
         btnHelp = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        btnReset = new javax.swing.JButton();
-        lblObjectMassUnit = new javax.swing.JLabel();
-        lblNote = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
@@ -72,6 +72,16 @@ public class SchwarzschildRadius extends javax.swing.JFrame
         txfObjectMass.setText("0.0");
         txfObjectMass.setToolTipText("Type in the object mass here");
 
+        lblObjectMassUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        lblObjectMassUnit.setForeground(new java.awt.Color(255, 255, 255));
+        lblObjectMassUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblObjectMassUnit.setText("kg");
+
+        lblNote.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        lblNote.setForeground(new java.awt.Color(255, 51, 51));
+        lblNote.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNote.setText("Note: there are constant variables in this equation that cannot be changed");
+
         txfOutput.setEditable(false);
         txfOutput.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
         txfOutput.setForeground(new java.awt.Color(0, 80, 0));
@@ -97,13 +107,27 @@ public class SchwarzschildRadius extends javax.swing.JFrame
         btnBack.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/BackIcon.png"))); // NOI18N
         btnBack.setText("Back");
-        btnBack.setToolTipText("Click here to go back to the easy equations menu");
+        btnBack.setToolTipText("Click here to go back to the medium equations menu");
         btnBack.setIconTextGap(8);
         btnBack.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 btnBackActionPerformed(evt);
+            }
+        });
+
+        btnReset.setBackground(new java.awt.Color(255, 255, 255));
+        btnReset.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ResetIcon.png"))); // NOI18N
+        btnReset.setText("Reset");
+        btnReset.setToolTipText("Click here to reset all the variable fields to their default values");
+        btnReset.setIconTextGap(8);
+        btnReset.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnResetActionPerformed(evt);
             }
         });
 
@@ -134,30 +158,6 @@ public class SchwarzschildRadius extends javax.swing.JFrame
                 btnExitActionPerformed(evt);
             }
         });
-
-        btnReset.setBackground(new java.awt.Color(255, 255, 255));
-        btnReset.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesPkg/ResetIcon.png"))); // NOI18N
-        btnReset.setText("Reset");
-        btnReset.setToolTipText("Click here to reset all the variable fields to their default values");
-        btnReset.setIconTextGap(8);
-        btnReset.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btnResetActionPerformed(evt);
-            }
-        });
-
-        lblObjectMassUnit.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
-        lblObjectMassUnit.setForeground(new java.awt.Color(255, 255, 255));
-        lblObjectMassUnit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblObjectMassUnit.setText("kg");
-
-        lblNote.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        lblNote.setForeground(new java.awt.Color(255, 51, 51));
-        lblNote.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNote.setText("Note: there are constant variables in this equation that cannot be changed");
 
         javax.swing.GroupLayout SchwarzschildRadiusPanelLayout = new javax.swing.GroupLayout(SchwarzschildRadiusPanel);
         SchwarzschildRadiusPanel.setLayout(SchwarzschildRadiusPanelLayout);
@@ -274,9 +274,9 @@ public class SchwarzschildRadius extends javax.swing.JFrame
         if (validate.vDouble(txfObjectMass.getText(), "The Object Mass value is invalid. Please enter a valid value and try again."))
         {
 
-            // Create variables and set their values to the associated text field values
+            // Create double variables and set their values to the associated parsed double text field values
             double objectMass = Double.parseDouble(txfObjectMass.getText());
-            
+
             // Create variables for each constant variable
             double gravitionalConstant = 6.6743e-11;
             double speedLight = 299792458;
